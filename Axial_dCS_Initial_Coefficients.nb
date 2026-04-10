@@ -1,0 +1,2544 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    108314,       2536]
+NotebookOptionsPosition[    103869,       2455]
+NotebookOutlinePosition[    104336,       2473]
+CellTagsIndexPosition[    104293,       2470]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "The", " ", "coefficient", " ", "matrices", " ", "of", " ", "the", " ", 
+      "initial", " ", "12"}], "-", 
+     RowBox[{
+     "term", " ", "recursion", " ", "relation", " ", "for", " ", "the", " ", 
+      "slow", " ", "rotation", " ", "and", " ", "weak", " ", "coupling", " ", 
+      "regime", " ", "of", " ", "dCS", " ", "gravity", " ", "are", " ", 
+      "provided", " ", 
+      RowBox[{"below", ".", " ", "The"}], " ", "index", " ", "in", 
+      " ", "\"\<GammaMatrixCoeff[]\>\"", " ", "represents", " ", "the", " ", 
+      "i"}]}], "=", "1"}], ",", " ", 
+   RowBox[{"i", "=", "0"}], ",", " ", "...", " ", ",", " ", 
+   RowBox[{"i", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "10"}], " ", "matrix", " ", "of", " ", "equation", " ", 
+      "80.", " ", "The", " ", "elements", " ", "of", " ", "each", " ", 
+      "matrix", " ", "already", " ", "consist", " ", "of", " ", "the", " ", 
+      "notation", " ", "M"}], "=", "1"}]}], ",", " ", 
+   RowBox[{
+   "which", " ", "is", " ", "the", " ", "reason", " ", "why", " ", "the", " ",
+     "mass", " ", "of", " ", "the", " ", "black", " ", "hole", " ", "does", " ",
+     "not", " ", "appear", " ", 
+    RowBox[{"anywhere", "."}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.984776850576727*^9, 3.984776967948349*^9}, {
+  3.984777688147892*^9, 
+  3.98477776865234*^9}},ExpressionUUID->"fa3cf2f9-2b6e-1a4c-8f44-\
+abf46f6b00a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.9847779627750645`*^9, 3.9847779685574055`*^9}},
+ CellLabel->"In[99]:=",ExpressionUUID->"ad028b73-5e45-3241-941e-f37164214e77"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"l", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "l"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "n"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "448"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "n"}], ")"}]}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "448"}], "+", 
+           RowBox[{"709", " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"1792", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], " ",
+       "\[Omega]"}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "n"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"448", " ", "n"}], "-", 
+        RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "448"}], "+", 
+           RowBox[{"709", " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"448", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}]}], 
+       ")"}], " ", 
+      SuperscriptBox["\[Omega]", "2"]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.984777974727186*^9},
+ CellLabel->"Out[99]=",ExpressionUUID->"7ee71f84-0a54-564e-a1e5-7e2512dfccef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", "0", "]"}]], "Input",
+ CellChangeTimes->{{3.9847779848171215`*^9, 3.9847779851036205`*^9}},
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"1ba6ee4c-3ab0-e346-ac08-e443ae63090d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"448", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", "l", "+", 
+         SuperscriptBox["l", "2"], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["n", "2"]}], "+", 
+         RowBox[{"2", " ", "n", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "-", 
+         RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+         RowBox[{"32", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"224", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "l", " ", "\[Omega]", " ", 
+             RowBox[{"(", 
+              RowBox[{"\[ImaginaryI]", "+", 
+               RowBox[{"2", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+               RowBox[{"6", " ", "\[Omega]"}]}], ")"}]}], "+", 
+            RowBox[{"2", " ", 
+             SuperscriptBox["l", "2"], " ", "\[Omega]", " ", 
+             RowBox[{"(", 
+              RowBox[{"\[ImaginaryI]", "+", 
+               RowBox[{"2", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+               RowBox[{"6", " ", "\[Omega]"}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"1736", "+", 
+            RowBox[{"l", " ", 
+             RowBox[{"(", 
+              RowBox[{"1001", "-", 
+               RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"1236", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{
+             SuperscriptBox["l", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{"1001", "-", 
+               RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"1236", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+     "56", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "\[Alpha]", " ", 
+      "\[Omega]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"96", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{"53", "+", 
+           RowBox[{"48", " ", "n"}], "-", 
+           RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+           RowBox[{"192", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"56", " ", "\[ImaginaryI]", " ", "\[Alpha]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"6", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2"}], "-", "l", "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["l", "2"]}], "+", 
+           SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]"}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", "n"}], "-", 
+           RowBox[{"\[Omega]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"18", " ", "\[ImaginaryI]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"19", "+", 
+                 RowBox[{"12", " ", "l"}], "+", 
+                 RowBox[{"12", " ", 
+                  SuperscriptBox["l", "2"]}]}], ")"}], " ", "\[Omega]"}]}], 
+             ")"}]}]}], ")"}]}]}], ")"}]}], ",", 
+     RowBox[{
+      SuperscriptBox["\[Omega]", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "448"}], "-", 
+        RowBox[{"896", " ", 
+         SuperscriptBox["n", "2"]}], "-", 
+        RowBox[{"448", " ", "\[ImaginaryI]", " ", "m", " ", "s"}], "+", 
+        RowBox[{
+        "709", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"448", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"9", " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "-", 
+        RowBox[{"448", " ", 
+         SuperscriptBox["l", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"9", " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"3584", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"2688", " ", "m", " ", "s", " ", "\[Omega]"}], "+", 
+        RowBox[{"6828", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"14336", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"m", " ", "s", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "448"}], "+", 
+              RowBox[{"709", " ", "\[Pi]", " ", 
+               SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+           RowBox[{"448", " ", 
+            RowBox[{"(", 
+             RowBox[{"\[ImaginaryI]", "+", 
+              RowBox[{"8", " ", "\[Omega]"}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9847779861162395`*^9},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"d49cd650-8d2b-7249-9ccf-4c3714dbcb3b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "1"}], "]"}]], "Input",
+ CellChangeTimes->{3.9847779944046535`*^9},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"c45f113e-d29e-1640-88c4-ab6fb06f52a0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"448", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+       RowBox[{"(", 
+        RowBox[{"4", "-", 
+         SuperscriptBox["n", "2"], "+", 
+         RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+         RowBox[{"16", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "448"}], " ", "\[ImaginaryI]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"15", " ", "\[ImaginaryI]"}], "+", 
+            RowBox[{"l", " ", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], 
+             " ", "\[Omega]"}], "+", 
+            RowBox[{
+             SuperscriptBox["l", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], 
+             " ", "\[Omega]"}]}], ")"}]}], "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2016", " ", 
+             SuperscriptBox["l", "3"]}], "+", 
+            RowBox[{"1008", " ", 
+             SuperscriptBox["l", "4"]}], "+", 
+            RowBox[{"l", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "31976"}], "+", 
+               RowBox[{
+               "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+               RowBox[{"10994", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{
+             SuperscriptBox["l", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "30968"}], "+", 
+               RowBox[{
+               "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+               RowBox[{"10994", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"560", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "127"}], "+", 
+               RowBox[{"192", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"-", "112"}], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+      "\[Alpha]", " ", "\[Omega]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"144", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{"139", "+", 
+           RowBox[{"288", " ", "n"}], "-", 
+           RowBox[{"672", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+           RowBox[{"288", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "56"}], " ", "\[ImaginaryI]", " ", "\[Alpha]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"18", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2"}], "-", "l", "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["l", "2"]}], "+", 
+           SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]"}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"63", " ", "n"}], "-", 
+           RowBox[{"2", " ", 
+            RowBox[{"(", 
+             RowBox[{"36", "+", 
+              RowBox[{"81", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"11", "+", 
+                 RowBox[{"18", " ", "l"}], "+", 
+                 RowBox[{"18", " ", 
+                  SuperscriptBox["l", "2"]}]}], ")"}], " ", 
+               SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}], ",", 
+     RowBox[{"\[Omega]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"448", " ", "\[Omega]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["n", "2"], "+", 
+           RowBox[{"54", " ", "l", " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}], "+", 
+           RowBox[{"54", " ", 
+            SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"]}], "-", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+           RowBox[{"16", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"448", " ", "\[Omega]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"\[ImaginaryI]", " ", "n"}], "+", 
+              RowBox[{"4", " ", "\[Omega]"}]}], ")"}]}], "+", 
+           RowBox[{"\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"378", "+", 
+              RowBox[{"1008", " ", "l"}], "+", 
+              RowBox[{"1008", " ", 
+               SuperscriptBox["l", "2"]}], "-", 
+              RowBox[{
+              "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+              RowBox[{"37390", " ", 
+               SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9847779948727818`*^9},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"8bfc71d1-5e92-6f49-bde2-9e77f0790f5f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780386439495`*^9, 3.984778039836155*^9}},
+ CellLabel->
+  "In[102]:=",ExpressionUUID->"8bd7aa50-f3cf-3a4b-bdc0-5b87a979c48a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "16128"}], " ", "m", " ", "s"}], "+", 
+      RowBox[{"874524", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"243222", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"235158", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"16128", " ", 
+       SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"8064", " ", 
+       SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"477120", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"14600", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"14600", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "31080"}], " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ",
+        "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{
+      "137088", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+       "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{
+      "16128", " ", "\[ImaginaryI]", " ", "l", " ", "\[Pi]", " ", "\[Alpha]", 
+       " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"16128", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"387072", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{
+      "32256", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "24192"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "10584", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "-", 
+      RowBox[{
+      "2016", " ", "\[ImaginaryI]", " ", "l", " ", "\[Alpha]", " ", 
+       "\[Omega]"}], "-", 
+      RowBox[{"1008", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{"2016", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "3"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{"1008", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "4"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{"32256", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}],
+       "+", 
+      RowBox[{
+      "168", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{
+      "2016", " ", "\[ImaginaryI]", " ", "l", " ", "m", " ", "s", " ", 
+       "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"2016", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1344"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"8064", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"8064", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"60480", " ", "l", " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"60480", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"106360", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.984778040560192*^9},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"a9e29a6d-0135-9f47-bb5b-5a7a28ebf9ad"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780455164413`*^9, 3.9847780464470596`*^9}},
+ CellLabel->
+  "In[103]:=",ExpressionUUID->"573a528f-4338-a44b-ae51-07008a5f0d1e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", " ", "m", " ", "s", " ", 
+      RowBox[{"(", 
+       RowBox[{"7392", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"28224", " ", 
+            SuperscriptBox["l", "3"]}], "+", 
+           RowBox[{"14112", " ", 
+            SuperscriptBox["l", "4"]}], "-", 
+           RowBox[{"5", " ", "l", " ", 
+            RowBox[{"(", 
+             RowBox[{"86548", "+", 
+              RowBox[{"863", " ", 
+               SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "-", 
+           RowBox[{
+            SuperscriptBox["l", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"418628", "+", 
+              RowBox[{"4315", " ", 
+               SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+           RowBox[{"28", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "86567"}], "+", 
+              RowBox[{"15120", " ", 
+               SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}], ",", 
+     RowBox[{
+      RowBox[{"-", "448"}], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+      "\[Alpha]", " ", "\[Omega]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"12", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "605"}], "+", 
+           RowBox[{"660", " ", "n"}], "-", 
+           RowBox[{"2160", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+           RowBox[{"24", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "60480", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], "-", 
+      RowBox[{
+      "17640", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "672", " ", "\[ImaginaryI]", " ", "l", " ", "\[Alpha]", " ", 
+       "\[Omega]"}], "+", 
+      RowBox[{"336", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{"672", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "3"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{"336", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "4"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{"60480", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}],
+       "-", 
+      RowBox[{
+      "336", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{
+      "672", " ", "\[ImaginaryI]", " ", "l", " ", "m", " ", "s", " ", 
+       "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"672", " ", "\[ImaginaryI]", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "756"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"28224", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"28224", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"80640", " ", "l", " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"80640", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"152650", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9847780475926476`*^9},
+ CellLabel->
+  "Out[103]=",ExpressionUUID->"4d7f9cd7-9f5b-e94b-9df8-d5d311cd7fa4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.984778055816843*^9, 3.984778056052023*^9}},
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"2fb54966-e92b-c246-86ab-c9795a656ba9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4704"}], " ", "m", " ", "s"}], "+", 
+      RowBox[{"14877352", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"1758148", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"1701700", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"112896", " ", 
+       SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"56448", " ", 
+       SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"752640", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"2748", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"2748", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "569240"}], " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", 
+       " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{
+      "362880", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+       "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{"1317120", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "80640"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "17640", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "65520", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+     RowBox[{
+      RowBox[{"11592", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"56448", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"56448", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"60480", " ", "l", " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"60480", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"118212", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.984778056994669*^9},
+ CellLabel->
+  "Out[104]=",ExpressionUUID->"50329ca7-a9e1-b44d-b399-f72f5811bec3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780612701836`*^9, 3.9847780617239056`*^9}},
+ CellLabel->
+  "In[105]:=",ExpressionUUID->"55b4c549-a75e-8f43-967f-1e5cce6d542b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "27961416"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"2209116", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"2138556", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"141120", " ", 
+       SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"70560", " ", 
+       SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"336000", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"378", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"378", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+      "563472", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{
+      "258048", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+       "s", " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{"999936", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "60480", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], "-", 
+      RowBox[{
+      "10584", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "-", 
+      RowBox[{
+      "41328", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "26040"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"70560", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"70560", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"24192", " ", "l", " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"24192", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"48006", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.98477806218231*^9},
+ CellLabel->
+  "Out[105]=",ExpressionUUID->"b569e0ec-955e-734c-aebc-12c16452cdbb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "6"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780680781994`*^9, 3.984778068614912*^9}},
+ CellLabel->
+  "In[106]:=",ExpressionUUID->"03ef2ae1-e595-754c-97b3-8418d5dbbbd1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"33698000", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"1758386", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"1701938", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"112896", " ", 
+       SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"56448", " ", 
+       SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"60480", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "275352"}], " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", 
+       " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{
+      "99456", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+       "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+      RowBox[{"397824", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "24192"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "3528", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "+", 
+      RowBox[{
+      "14112", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+     RowBox[{
+      RowBox[{"29232", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"56448", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"56448", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+      RowBox[{"4032", " ", "l", " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "-", 
+      RowBox[{"4032", " ", 
+       SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      RowBox[{"8064", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9847780692549744`*^9},
+ CellLabel->
+  "Out[106]=",ExpressionUUID->"4f6424aa-00d8-2748-bc5b-422c34a5a791"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780732187824`*^9, 3.984778073582966*^9}},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"326d412d-3394-7640-bc7a-0b160bb15cb4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "26261144"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"868112", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"839888", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"56448", " ", 
+       SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"28224", " ", 
+       SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{
+      "53760", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{
+      "16128", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+       "s", " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+      RowBox[{"64512", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "4032", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], "-", 
+      RowBox[{
+      "504", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+       "\[Alpha]"}], "-", 
+      RowBox[{
+      "2016", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "18396"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"28224", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+      RowBox[{"28224", " ", 
+       SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9847780744421177`*^9},
+ CellLabel->
+  "Out[107]=",ExpressionUUID->"76c66fc3-89ae-f843-8363-aeaeb72d9e89"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.984778078412094*^9, 3.9847780787769566`*^9}},
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"3d90f5f6-5652-0047-9e65-be5d2fd170c2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "21"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "611792"}], "-", 
+        RowBox[{"11615", " ", "l"}], "-", 
+        RowBox[{"11231", " ", 
+         SuperscriptBox["l", "2"]}], "+", 
+        RowBox[{"768", " ", 
+         SuperscriptBox["l", "3"]}], "+", 
+        RowBox[{"384", " ", 
+         SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+      "s", " ", 
+      SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{
+      RowBox[{"-", "168"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "37"}], "+", 
+        RowBox[{"48", " ", "l"}], "+", 
+        RowBox[{"48", " ", 
+         SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+      "s", " ", 
+      SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9847780792920265`*^9},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"64ebee9e-16fd-7541-a94a-e2646cc51b94"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "9"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780860541477`*^9, 3.9847780865540314`*^9}},
+ CellLabel->
+  "In[109]:=",ExpressionUUID->"5ad2f519-e7e6-0148-96e4-04da22d41ae8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"252", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "14286"}], "-", 
+        RowBox[{"119", " ", "l"}], "-", 
+        RowBox[{"115", " ", 
+         SuperscriptBox["l", "2"]}], "+", 
+        RowBox[{"8", " ", 
+         SuperscriptBox["l", "3"]}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+      "s", " ", 
+      SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"126", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "7"}], "+", 
+        RowBox[{"8", " ", "l"}], "+", 
+        RowBox[{"8", " ", 
+         SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+      "s", " ", 
+      SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9847780872772408`*^9},
+ CellLabel->
+  "Out[109]=",ExpressionUUID->"cb28d413-79f9-2747-99ab-48b7350ad0b8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaMatrixCoeff", "[", 
+  RowBox[{"-", "10"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847780913118553`*^9, 3.984778091468025*^9}},
+ CellLabel->
+  "In[110]:=",ExpressionUUID->"57147a40-e79f-2641-9111-63f68b84da1b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"442260", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+      SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9847780918161564`*^9},
+ CellLabel->
+  "Out[110]=",ExpressionUUID->"6f1c852b-75b2-b241-a1c9-daad73fed0b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", 
+    RowBox[{"-", "10"}]}], ",", 
+   RowBox[{"i", "<=", "1"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<The coefficient matrix for i=\>\"", ",", "i", 
+     ",", "\"\< is \[CapitalGamma]=\>\"", ",", 
+     RowBox[{"GammaMatrixCoeff", "[", "i", "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.9847766026501446`*^9, 3.984776784751442*^9}, {
+  3.9847768237758713`*^9, 3.984776837408594*^9}, {3.9847777809299965`*^9, 
+  3.9847778451929035`*^9}, {3.984778098960779*^9, 
+  3.984778133963032*^9}},ExpressionUUID->"ace81b44-8b59-0744-932e-\
+281c0b4f0698"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "10"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"442260", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+        SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -10, 
+   " is \[CapitalGamma]=", {{
+    442260 $CellContext`m Pi $CellContext`s $CellContext`\[Alpha]^2, 0}, {0, 
+    0}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845728386*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"dd713d7a-d251-dc40-9db5-552b19bed018"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "9"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"252", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "14286"}], "-", 
+          RowBox[{"119", " ", "l"}], "-", 
+          RowBox[{"115", " ", 
+           SuperscriptBox["l", "2"]}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["l", "3"]}], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+        "s", " ", 
+        SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"126", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "7"}], "+", 
+          RowBox[{"8", " ", "l"}], "+", 
+          RowBox[{"8", " ", 
+           SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+        "s", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -9, 
+   " is \[CapitalGamma]=", {{
+    252 (-14286 - 119 $CellContext`l - 115 $CellContext`l^2 + 
+      8 $CellContext`l^3 + 4 $CellContext`l^4) $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2, 0}, {
+    0, 126 (-7 + 8 $CellContext`l + 8 $CellContext`l^2) $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457439995`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"1a2e5e2b-0594-af48-965f-10b2c449d8fe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "8"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "21"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "611792"}], "-", 
+          RowBox[{"11615", " ", "l"}], "-", 
+          RowBox[{"11231", " ", 
+           SuperscriptBox["l", "2"]}], "+", 
+          RowBox[{"768", " ", 
+           SuperscriptBox["l", "3"]}], "+", 
+          RowBox[{"384", " ", 
+           SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+        "s", " ", 
+        SuperscriptBox["\[Alpha]", "2"]}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{
+        RowBox[{"-", "168"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "37"}], "+", 
+          RowBox[{"48", " ", "l"}], "+", 
+          RowBox[{"48", " ", 
+           SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", 
+        "s", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -8, 
+   " is \[CapitalGamma]=", {{(-21) (-611792 - 11615 $CellContext`l - 
+      11231 $CellContext`l^2 + 768 $CellContext`l^3 + 
+      384 $CellContext`l^4) $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2, 0}, {
+    0, (-168) (-37 + 48 $CellContext`l + 48 $CellContext`l^2) $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457439995`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"7afa1764-4867-4f42-bafa-e04778db7da2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "7"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "26261144"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"868112", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"839888", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"56448", " ", 
+         SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"28224", " ", 
+         SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+        "53760", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{
+        "16128", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+         "s", " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{"64512", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "4032", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], "-", 
+        RowBox[{
+        "504", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "-", 
+        RowBox[{
+        "2016", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "18396"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"28224", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"28224", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}]}]}], "}"}]}], 
+    "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -7, 
+   " is \[CapitalGamma]=", {{(-26261144) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     868112 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     839888 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     56448 $CellContext`l^3 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     28224 $CellContext`l^4 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2, 
+     Complex[0, 53760] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, -16128] $CellContext`m $CellContext`n 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] - 
+     64512 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^2}, {
+    Complex[0, 4032] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, -504] $CellContext`m $CellContext`n $CellContext`s \
+$CellContext`\[Alpha] - 
+     2016 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega], (-18396) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     28224 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     28224 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457439995`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"fb653bc5-a53f-9147-ba40-662d711ef84a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "6"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"33698000", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"1758386", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"1701938", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"112896", " ", 
+         SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"56448", " ", 
+         SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"60480", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "275352"}], " ", "\[ImaginaryI]", " ", "m", " ", 
+         "\[Pi]", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "99456", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ", 
+         "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{"397824", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "24192"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ",
+          "\[Alpha]"}], "+", 
+        RowBox[{
+        "3528", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "+", 
+        RowBox[{
+        "14112", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+       RowBox[{
+        RowBox[{"29232", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"56448", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"56448", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"4032", " ", "l", " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"4032", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"8064", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -6, 
+   " is \[CapitalGamma]=", {{
+    33698000 $CellContext`m Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     1758386 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     1701938 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     112896 $CellContext`l^3 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     56448 $CellContext`l^4 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 60480 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2, 
+     Complex[0, -275352] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 99456] $CellContext`m $CellContext`n 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     397824 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^2}, {
+    Complex[0, -24192] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, 
+        3528] $CellContext`m $CellContext`n $CellContext`s $CellContext`\
+\[Alpha] + 
+     14112 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega], 
+     29232 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     56448 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     56448 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     4032 $CellContext`l Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     4032 $CellContext`l^2 Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     8064 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^3}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457439995`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"2c0c3b74-4aee-fc4e-8a99-079166ba9055"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "5"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "27961416"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"2209116", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"2138556", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"141120", " ", 
+         SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"70560", " ", 
+         SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"336000", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"378", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"378", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+        "563472", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ",
+          "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{
+        "258048", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ",
+          "s", " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{"999936", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "60480", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], 
+        "-", 
+        RowBox[{
+        "10584", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "-", 
+        RowBox[{
+        "41328", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "26040"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"70560", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"70560", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"24192", " ", "l", " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"24192", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"48006", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -5, 
+   " is \[CapitalGamma]=", {{(-27961416) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     2209116 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     2138556 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     141120 $CellContext`l^3 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     70560 $CellContext`l^4 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     336000 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     378 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     378 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2, 
+     Complex[0, 563472] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, -258048] $CellContext`m $CellContext`n 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] - 
+     999936 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^2}, {
+    Complex[0, 60480] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, -10584] $CellContext`m $CellContext`n $CellContext`s \
+$CellContext`\[Alpha] - 
+     41328 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega], (-26040) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     70560 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     70560 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     24192 $CellContext`l Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     24192 $CellContext`l^2 
+      Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     48006 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^3}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457596607`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"6c3ca4e4-1150-e24a-a91b-d5c25d0812da"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "4"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4704"}], " ", "m", " ", "s"}], "+", 
+        RowBox[{"14877352", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"1758148", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"1701700", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"112896", " ", 
+         SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"56448", " ", 
+         SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"752640", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"2748", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"2748", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "569240"}], " ", "\[ImaginaryI]", " ", "m", " ", 
+         "\[Pi]", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "362880", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ",
+          "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "1317120", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "80640"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ",
+          "\[Alpha]"}], "+", 
+        RowBox[{
+        "17640", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "+", 
+        RowBox[{
+        "65520", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}]}], ",", 
+       RowBox[{
+        RowBox[{"11592", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"56448", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"56448", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"60480", " ", "l", " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"60480", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"118212", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -4, 
+   " is \[CapitalGamma]=", {{(-4704) $CellContext`m $CellContext`s + 
+     14877352 $CellContext`m Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     1758148 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     1701700 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     112896 $CellContext`l^3 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     56448 $CellContext`l^4 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 752640 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     2748 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     2748 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2, 
+     Complex[0, -569240] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 362880] $CellContext`m $CellContext`n 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     1317120 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^2}, {
+    Complex[0, -80640] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, 
+        17640] $CellContext`m $CellContext`n $CellContext`s $CellContext`\
+\[Alpha] + 
+     65520 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega], 
+     11592 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     56448 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     56448 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     60480 $CellContext`l Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     60480 $CellContext`l^2 
+     Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     118212 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^3}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.9847778457596607`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"a3f32a95-3a0f-7740-8d0c-6972794ac983"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", " ", "m", " ", "s", " ", 
+        RowBox[{"(", 
+         RowBox[{"7392", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"28224", " ", 
+              SuperscriptBox["l", "3"]}], "+", 
+             RowBox[{"14112", " ", 
+              SuperscriptBox["l", "4"]}], "-", 
+             RowBox[{"5", " ", "l", " ", 
+              RowBox[{"(", 
+               RowBox[{"86548", "+", 
+                RowBox[{"863", " ", 
+                 SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "-", 
+             RowBox[{
+              SuperscriptBox["l", "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"418628", "+", 
+                RowBox[{"4315", " ", 
+                 SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+             RowBox[{"28", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "86567"}], "+", 
+                RowBox[{"15120", " ", 
+                 SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}], ",", 
+       RowBox[{
+        RowBox[{"-", "448"}], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+        "\[Alpha]", " ", "\[Omega]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"12", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "605"}], "+", 
+             RowBox[{"660", " ", "n"}], "-", 
+             RowBox[{"2160", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+             RowBox[{"24", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "60480", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]"}], 
+        "-", 
+        RowBox[{
+        "17640", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "+", 
+        RowBox[{
+        "672", " ", "\[ImaginaryI]", " ", "l", " ", "\[Alpha]", " ", 
+         "\[Omega]"}], "+", 
+        RowBox[{"336", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{"672", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "3"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{"336", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "4"], " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{
+        "60480", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "-", 
+        RowBox[{
+        "336", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{
+        "672", " ", "\[ImaginaryI]", " ", "l", " ", "m", " ", "s", " ", 
+         "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"672", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "756"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"28224", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"28224", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+        RowBox[{"80640", " ", "l", " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"80640", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"152650", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -3, 
+   " is \[CapitalGamma]=", {{
+    2 $CellContext`m $CellContext`s (7392 + 
+      Pi $CellContext`\[Alpha]^2 (28224 $CellContext`l^3 + 
+        14112 $CellContext`l^4 - 
+        5 $CellContext`l (86548 + 
+         863 $CellContext`\[Omega]^2) - $CellContext`l^2 (418628 + 
+         4315 $CellContext`\[Omega]^2) + 
+        28 (-86567 + 15120 $CellContext`\[Omega]^2))), Complex[0, -448] 
+     Pi $CellContext`\[Alpha] $CellContext`\[Omega] (
+      12 $CellContext`l (
+        1 + $CellContext`l) $CellContext`\[Omega] + $CellContext`m \
+$CellContext`s (-605 + 660 $CellContext`n + 
+        Complex[0, -2160] $CellContext`\[Omega] - 
+        24 $CellContext`\[Omega]^2))}, {
+    Complex[0, 60480] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, -17640] $CellContext`m $CellContext`n $CellContext`s \
+$CellContext`\[Alpha] + 
+     Complex[0, 
+        672] $CellContext`l $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 
+        336] $CellContext`l^2 $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, -672] $CellContext`l^3 $CellContext`\[Alpha] $CellContext`\
+\[Omega] + Complex[
+       0, -336] $CellContext`l^4 $CellContext`\[Alpha] $CellContext`\[Omega] - 
+     60480 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega] + Complex[
+       0, -336] $CellContext`m $CellContext`s $CellContext`\[Alpha] \
+$CellContext`\[Omega]^2 + 
+     Complex[0, 
+        672] $CellContext`l $CellContext`m $CellContext`s $CellContext`\
+\[Alpha] $CellContext`\[Omega]^2 + 
+     Complex[0, 
+        672] $CellContext`l^2 $CellContext`m $CellContext`s $CellContext`\
+\[Alpha] $CellContext`\[Omega]^2, (-756) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     28224 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     28224 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+     80640 $CellContext`l Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     80640 $CellContext`l^2 
+      Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     152650 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^3}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845775276*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"32946ed7-9f68-c34c-b9e1-a62856901472"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "16128"}], " ", "m", " ", "s"}], "+", 
+        RowBox[{"874524", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"243222", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "+", 
+        RowBox[{"235158", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"16128", " ", 
+         SuperscriptBox["l", "3"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"8064", " ", 
+         SuperscriptBox["l", "4"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"]}], "-", 
+        RowBox[{"477120", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"14600", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"14600", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "31080"}], " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]",
+          " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "137088", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "\[Pi]", " ",
+          "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "16128", " ", "\[ImaginaryI]", " ", "l", " ", "\[Pi]", " ", 
+         "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"16128", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"387072", " ", "m", " ", "\[Pi]", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{
+        "32256", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "24192"}], " ", "\[ImaginaryI]", " ", "m", " ", "s", " ",
+          "\[Alpha]"}], "+", 
+        RowBox[{
+        "10584", " ", "\[ImaginaryI]", " ", "m", " ", "n", " ", "s", " ", 
+         "\[Alpha]"}], "-", 
+        RowBox[{
+        "2016", " ", "\[ImaginaryI]", " ", "l", " ", "\[Alpha]", " ", 
+         "\[Omega]"}], "-", 
+        RowBox[{"1008", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{"2016", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "3"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{"1008", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "4"], " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "32256", " ", "m", " ", "s", " ", "\[Alpha]", " ", "\[Omega]"}], "+", 
+        RowBox[{
+        "168", " ", "\[ImaginaryI]", " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{
+        "2016", " ", "\[ImaginaryI]", " ", "l", " ", "m", " ", "s", " ", 
+         "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"2016", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "s", " ", "\[Alpha]", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "1344"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"8064", " ", "l", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"8064", " ", 
+         SuperscriptBox["l", "2"], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "-", 
+        RowBox[{"60480", " ", "l", " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "-", 
+        RowBox[{"60480", " ", 
+         SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        RowBox[{"106360", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         SuperscriptBox["\[Omega]", "3"]}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -2, 
+   " is \[CapitalGamma]=", {{(-16128) $CellContext`m $CellContext`s + 
+     874524 $CellContext`m Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     243222 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 + 
+     235158 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     16128 $CellContext`l^3 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+     8064 $CellContext`l^4 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 - 477120 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     14600 $CellContext`l $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     14600 $CellContext`l^2 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2, 
+     Complex[0, -31080] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 137088] $CellContext`m $CellContext`n 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 16128] $CellContext`l 
+      Pi $CellContext`\[Alpha] $CellContext`\[Omega]^2 + 
+     Complex[0, 16128] $CellContext`l^2 
+      Pi $CellContext`\[Alpha] $CellContext`\[Omega]^2 + 
+     387072 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^2 + 
+     Complex[0, -32256] $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha] $CellContext`\[Omega]^3}, {
+    Complex[0, -24192] $CellContext`m $CellContext`s $CellContext`\[Alpha] + 
+     Complex[0, 
+        10584] $CellContext`m $CellContext`n $CellContext`s $CellContext`\
+\[Alpha] + Complex[
+       0, -2016] $CellContext`l $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, -1008] $CellContext`l^2 $CellContext`\[Alpha] $CellContext`\
+\[Omega] + Complex[
+       0, 2016] $CellContext`l^3 $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     Complex[0, 
+        1008] $CellContext`l^4 $CellContext`\[Alpha] $CellContext`\[Omega] + 
+     32256 $CellContext`m $CellContext`s $CellContext`\[Alpha] $CellContext`\
+\[Omega] + Complex[
+       0, 168] $CellContext`m $CellContext`s $CellContext`\[Alpha] \
+$CellContext`\[Omega]^2 + 
+     Complex[0, -2016] $CellContext`l $CellContext`m $CellContext`s \
+$CellContext`\[Alpha] $CellContext`\[Omega]^2 + 
+     Complex[0, -2016] $CellContext`l^2 $CellContext`m $CellContext`s \
+$CellContext`\[Alpha] $CellContext`\[Omega]^2, (-1344) $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     8064 $CellContext`l $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     8064 $CellContext`l^2 $CellContext`m 
+     Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] - 
+     60480 $CellContext`l Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 - 
+     60480 $CellContext`l^2 
+     Pi $CellContext`\[Alpha]^2 $CellContext`\[Omega]^2 + 
+     106360 $CellContext`m 
+      Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega]^3}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845775276*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"f88130a7-b982-1942-8a25-68e74a711eec"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"448", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+         RowBox[{"(", 
+          RowBox[{"4", "-", 
+           SuperscriptBox["n", "2"], "+", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+           RowBox[{"16", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "448"}], " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"15", " ", "\[ImaginaryI]"}], "+", 
+              RowBox[{"l", " ", 
+               RowBox[{"(", 
+                RowBox[{"n", "-", 
+                 RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+                ")"}], " ", "\[Omega]"}], "+", 
+              RowBox[{
+               SuperscriptBox["l", "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{"n", "-", 
+                 RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+                ")"}], " ", "\[Omega]"}]}], ")"}]}], "+", 
+           RowBox[{"\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"2016", " ", 
+               SuperscriptBox["l", "3"]}], "+", 
+              RowBox[{"1008", " ", 
+               SuperscriptBox["l", "4"]}], "+", 
+              RowBox[{"l", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "31976"}], "+", 
+                 RowBox[{
+                 "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+                 RowBox[{"10994", " ", 
+                  SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+              RowBox[{
+               SuperscriptBox["l", "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "30968"}], "+", 
+                 RowBox[{
+                 "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+                 RowBox[{"10994", " ", 
+                  SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+              RowBox[{"560", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "127"}], "+", 
+                 RowBox[{"192", " ", 
+                  SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+          ")"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"-", "112"}], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+        "\[Alpha]", " ", "\[Omega]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"144", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{"139", "+", 
+             RowBox[{"288", " ", "n"}], "-", 
+             RowBox[{"672", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+             RowBox[{"288", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "56"}], " ", "\[ImaginaryI]", " ", "\[Alpha]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"18", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "-", "l", "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["l", "2"]}], "+", 
+             SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"63", " ", "n"}], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               RowBox[{"36", "+", 
+                RowBox[{"81", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"11", "+", 
+                   RowBox[{"18", " ", "l"}], "+", 
+                   RowBox[{"18", " ", 
+                    SuperscriptBox["l", "2"]}]}], ")"}], " ", 
+                 SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}], ",", 
+       RowBox[{"\[Omega]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", "\[Omega]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["n", "2"], "+", 
+             RowBox[{"54", " ", "l", " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}], "+", 
+             RowBox[{"54", " ", 
+              SuperscriptBox["l", "2"], " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}], "-", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+             RowBox[{"16", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"448", " ", "\[Omega]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[ImaginaryI]", " ", "n"}], "+", 
+                RowBox[{"4", " ", "\[Omega]"}]}], ")"}]}], "+", 
+             RowBox[{"\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"378", "+", 
+                RowBox[{"1008", " ", "l"}], "+", 
+                RowBox[{"1008", " ", 
+                 SuperscriptBox["l", "2"]}], "-", 
+                RowBox[{
+                "709", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+                RowBox[{"37390", " ", 
+                 SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", -1, 
+   " is \[CapitalGamma]=", {{
+    448 $CellContext`l (1 + $CellContext`l) $CellContext`\[Omega] (
+       4 - $CellContext`n^2 + 
+       Complex[0, 8] $CellContext`n $CellContext`\[Omega] + 
+       16 $CellContext`\[Omega]^2) + $CellContext`m $CellContext`s (
+       Complex[0, -448] (
+         Complex[0, 15] + $CellContext`l ($CellContext`n + 
+           Complex[0, -4] $CellContext`\[Omega]) $CellContext`\[Omega] + \
+$CellContext`l^2 ($CellContext`n + 
+           Complex[0, -4] $CellContext`\[Omega]) $CellContext`\[Omega]) + 
+       Pi $CellContext`\[Alpha]^2 (2016 $CellContext`l^3 + 
+         1008 $CellContext`l^4 + $CellContext`l (-31976 + 
+           Complex[0, 709] $CellContext`n $CellContext`\[Omega] - 
+           10994 $CellContext`\[Omega]^2) + $CellContext`l^2 (-30968 + 
+           Complex[0, 709] $CellContext`n $CellContext`\[Omega] - 
+           10994 $CellContext`\[Omega]^2) + 
+         560 (-127 + 192 $CellContext`\[Omega]^2))), Complex[0, -112] 
+     Pi $CellContext`\[Alpha] $CellContext`\[Omega] (
+      144 $CellContext`l (
+        1 + $CellContext`l) $CellContext`\[Omega] + $CellContext`m \
+$CellContext`s (139 + 288 $CellContext`n + 
+        Complex[0, -672] $CellContext`\[Omega] - 
+        288 $CellContext`\[Omega]^2))}, {
+    Complex[0, -56] $CellContext`\[Alpha] (
+      18 $CellContext`l (-2 - $CellContext`l + 
+        2 $CellContext`l^2 + $CellContext`l^3) $CellContext`\[Omega] + \
+$CellContext`m $CellContext`s (63 $CellContext`n - 
+        2 (36 + Complex[0, 81] $CellContext`\[Omega] + (11 + 
+           18 $CellContext`l + 
+           18 $CellContext`l^2) $CellContext`\[Omega]^2))), $CellContext`\
+\[Omega] (
+      448 $CellContext`\[Omega] ($CellContext`n^2 + 
+        54 $CellContext`l Pi $CellContext`\[Alpha]^2 + 
+        54 $CellContext`l^2 Pi $CellContext`\[Alpha]^2 + 
+        Complex[0, -8] $CellContext`n $CellContext`\[Omega] - 
+        16 $CellContext`\[Omega]^2) + $CellContext`m $CellContext`s (
+        448 $CellContext`\[Omega] (Complex[0, 1] $CellContext`n + 
+          4 $CellContext`\[Omega]) + 
+        Pi $CellContext`\[Alpha]^2 (378 + 1008 $CellContext`l + 
+          1008 $CellContext`l^2 + 
+          Complex[0, -709] $CellContext`n $CellContext`\[Omega] - 
+          37390 $CellContext`\[Omega]^2)))}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845790901*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"02897133-7152-6844-839e-5256ca702d23"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"448", " ", "l", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "3"}], "+", "l", "+", 
+           SuperscriptBox["l", "2"], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["n", "2"]}], "+", 
+           RowBox[{"2", " ", "n", " ", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}],
+            "-", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+           RowBox[{"32", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"m", " ", "s", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"224", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "l", " ", "\[Omega]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[ImaginaryI]", "+", 
+                 RowBox[{"2", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+                 RowBox[{"6", " ", "\[Omega]"}]}], ")"}]}], "+", 
+              RowBox[{"2", " ", 
+               SuperscriptBox["l", "2"], " ", "\[Omega]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[ImaginaryI]", "+", 
+                 RowBox[{"2", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+                 RowBox[{"6", " ", "\[Omega]"}]}], ")"}]}]}], ")"}]}], "+", 
+           RowBox[{"\[Pi]", " ", 
+            SuperscriptBox["\[Alpha]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"1736", "+", 
+              RowBox[{"l", " ", 
+               RowBox[{"(", 
+                RowBox[{"1001", "-", 
+                 RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1", "+", 
+                    RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+                 RowBox[{"1236", " ", 
+                  SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+              RowBox[{
+               SuperscriptBox["l", "2"], " ", 
+               RowBox[{"(", 
+                RowBox[{"1001", "-", 
+                 RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1", "+", 
+                    RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+                 RowBox[{"1236", " ", 
+                  SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+          ")"}]}]}], ",", 
+       RowBox[{
+       "56", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "\[Alpha]", " ", 
+        "\[Omega]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"96", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{"53", "+", 
+             RowBox[{"48", " ", "n"}], "-", 
+             RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+             RowBox[{"192", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"56", " ", "\[ImaginaryI]", " ", "\[Alpha]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"6", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "-", "l", "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["l", "2"]}], "+", 
+             SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"9", " ", "n"}], "-", 
+             RowBox[{"\[Omega]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"18", " ", "\[ImaginaryI]"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"19", "+", 
+                   RowBox[{"12", " ", "l"}], "+", 
+                   RowBox[{"12", " ", 
+                    SuperscriptBox["l", "2"]}]}], ")"}], " ", "\[Omega]"}]}], 
+               ")"}]}]}], ")"}]}]}], ")"}]}], ",", 
+       RowBox[{
+        SuperscriptBox["\[Omega]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "448"}], "-", 
+          RowBox[{"896", " ", 
+           SuperscriptBox["n", "2"]}], "-", 
+          RowBox[{"448", " ", "\[ImaginaryI]", " ", "m", " ", "s"}], "+", 
+          RowBox[{
+          "709", " ", "\[ImaginaryI]", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+           SuperscriptBox["\[Alpha]", "2"]}], "-", 
+          RowBox[{"448", " ", "l", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"9", " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "-", 
+          RowBox[{"448", " ", 
+           SuperscriptBox["l", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"9", " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"3584", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"2688", " ", "m", " ", "s", " ", "\[Omega]"}], "+", 
+          RowBox[{"6828", " ", "m", " ", "\[Pi]", " ", "s", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", "\[Omega]"}], "+", 
+          RowBox[{"14336", " ", 
+           SuperscriptBox["\[Omega]", "2"]}], "+", 
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"m", " ", "s", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "448"}], "+", 
+                RowBox[{"709", " ", "\[Pi]", " ", 
+                 SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+             RowBox[{"448", " ", 
+              RowBox[{"(", 
+               RowBox[{"\[ImaginaryI]", "+", 
+                RowBox[{"8", " ", "\[Omega]"}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", 0, 
+   " is \[CapitalGamma]=", {{
+    448 $CellContext`l (
+       1 + $CellContext`l) $CellContext`\[Omega] (-3 + $CellContext`l + \
+$CellContext`l^2 + 2 $CellContext`n^2 + 
+       2 $CellContext`n (1 + Complex[0, -8] $CellContext`\[Omega]) + 
+       Complex[0, -8] $CellContext`\[Omega] - 
+       32 $CellContext`\[Omega]^2) + $CellContext`m $CellContext`s (
+       224 (-3 + 2 $CellContext`l $CellContext`\[Omega] (Complex[0, 1] + 
+           Complex[0, 2] $CellContext`n + 6 $CellContext`\[Omega]) + 
+         2 $CellContext`l^2 $CellContext`\[Omega] (Complex[0, 1] + 
+           Complex[0, 2] $CellContext`n + 6 $CellContext`\[Omega])) + 
+       Pi $CellContext`\[Alpha]^2 (
+         1736 + $CellContext`l (1001 + 
+           Complex[0, -709] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+           1236 $CellContext`\[Omega]^2) + $CellContext`l^2 (1001 + 
+           Complex[0, -709] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+           1236 $CellContext`\[Omega]^2))), Complex[0, 56] 
+     Pi $CellContext`\[Alpha] $CellContext`\[Omega] (
+      96 $CellContext`l (
+        1 + $CellContext`l) $CellContext`\[Omega] + $CellContext`m \
+$CellContext`s (53 + 48 $CellContext`n + 
+        Complex[0, -96] $CellContext`\[Omega] - 
+        192 $CellContext`\[Omega]^2))}, {
+    Complex[0, 56] $CellContext`\[Alpha] (
+      6 $CellContext`l (-2 - $CellContext`l + 
+        2 $CellContext`l^2 + $CellContext`l^3) $CellContext`\[Omega] + \
+$CellContext`m $CellContext`s (
+        9 $CellContext`n - $CellContext`\[Omega] (
+         Complex[0, 18] + (19 + 12 $CellContext`l + 
+           12 $CellContext`l^2) $CellContext`\[Omega]))), $CellContext`\
+\[Omega]^2 (-448 - 896 $CellContext`n^2 + 
+      Complex[0, -448] $CellContext`m $CellContext`s + 
+      Complex[0, 709] $CellContext`m 
+       Pi $CellContext`s $CellContext`\[Alpha]^2 - 
+      448 $CellContext`l (1 + 9 Pi $CellContext`\[Alpha]^2) - 
+      448 $CellContext`l^2 (1 + 9 Pi $CellContext`\[Alpha]^2) + 
+      Complex[0, 3584] $CellContext`\[Omega] - 
+      2688 $CellContext`m $CellContext`s $CellContext`\[Omega] + 
+      6828 $CellContext`m 
+       Pi $CellContext`s $CellContext`\[Alpha]^2 $CellContext`\[Omega] + 
+      14336 $CellContext`\[Omega]^2 + 
+      Complex[0, 
+         2] $CellContext`n ($CellContext`m $CellContext`s (-448 + 
+          709 Pi $CellContext`\[Alpha]^2) + 
+        448 (Complex[0, 1] + 8 $CellContext`\[Omega])))}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845790901*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"f2e75b03-1167-c846-8c67-aff949fa4fd1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient matrix for i=\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" is \[CapitalGamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"l", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", "l"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", "n"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "448"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", "n"}], ")"}]}], "+", 
+          RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "448"}], "+", 
+             RowBox[{"709", " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"1792", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], " ",
+         "\[Omega]"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "+", "n"}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", "n"}], "-", 
+          RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "448"}], "+", 
+             RowBox[{"709", " ", "\[Pi]", " ", 
+              SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+            ")"}]}]}], ")"}], " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], "}"}]}], "}"}]}],
+  SequenceForm[
+  "The coefficient matrix for i=", 1, 
+   " is \[CapitalGamma]=", {{$CellContext`l (1 + $CellContext`l) (
+      1 + $CellContext`n) ((-448) (1 + $CellContext`n) + 
+      Complex[0, 1] $CellContext`m $CellContext`s (-448 + 
+        709 Pi $CellContext`\[Alpha]^2) + 
+      Complex[0, 1792] $CellContext`\[Omega]) $CellContext`\[Omega], 0}, {
+    0, (1 + $CellContext`n) (448 $CellContext`n + 
+      Complex[0, -1] $CellContext`m $CellContext`s (-448 + 
+        709 Pi $CellContext`\[Alpha]^2) + 
+      448 (1 + Complex[
+          0, -4] $CellContext`\[Omega])) $CellContext`\[Omega]^2}}],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.984776787251116*^9, {3.9847768320095425`*^9, 3.984776838632248*^9}, 
+   3.9847777858309593`*^9, {3.984777818316551*^9, 3.984777845790901*^9}},
+ CellLabel->
+  "During evaluation of \
+In[96]:=",ExpressionUUID->"675b0a65-f78d-1e42-b571-a638476f9abd"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"bca36cae-184c-fc49-8a9a-7eb9692ecbf4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 1467, 32, 76, "Input",ExpressionUUID->"fa3cf2f9-2b6e-1a4c-8f44-abf46f6b00a4"],
+Cell[CellGroupData[{
+Cell[2046, 56, 218, 3, 25, "Input",ExpressionUUID->"ad028b73-5e45-3241-941e-f37164214e77"],
+Cell[2267, 61, 1578, 45, 30, "Output",ExpressionUUID->"7ee71f84-0a54-564e-a1e5-7e2512dfccef"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3882, 111, 222, 4, 25, "Input",ExpressionUUID->"1ba6ee4c-3ab0-e346-ac08-e443ae63090d"],
+Cell[4107, 117, 5954, 151, 89, "Output",ExpressionUUID->"d49cd650-8d2b-7249-9ccf-4c3714dbcb3b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10098, 273, 214, 5, 25, "Input",ExpressionUUID->"c45f113e-d29e-1640-88c4-ab6fb06f52a0"],
+Cell[10315, 280, 5676, 148, 89, "Output",ExpressionUUID->"8bfc71d1-5e92-6f49-bde2-9e77f0790f5f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16028, 433, 238, 5, 25, "Input",ExpressionUUID->"8bd7aa50-f3cf-3a4b-bdc0-5b87a979c48a"],
+Cell[16269, 440, 4739, 102, 89, "Output",ExpressionUUID->"a9e29a6d-0135-9f47-bb5b-5a7a28ebf9ad"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21045, 547, 240, 5, 25, "Input",ExpressionUUID->"573a528f-4338-a44b-ae51-07008a5f0d1e"],
+Cell[21288, 554, 4184, 101, 70, "Output",ExpressionUUID->"4d7f9cd7-9f5b-e94b-9df8-d5d311cd7fa4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25509, 660, 236, 5, 25, "Input",ExpressionUUID->"2fb54966-e92b-c246-86ab-c9795a656ba9"],
+Cell[25748, 667, 3274, 71, 70, "Output",ExpressionUUID->"50329ca7-a9e1-b44d-b399-f72f5811bec3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29059, 743, 240, 5, 25, "Input",ExpressionUUID->"55b4c549-a75e-8f43-967f-1e5cce6d542b"],
+Cell[29302, 750, 3202, 70, 70, "Output",ExpressionUUID->"b569e0ec-955e-734c-aebc-12c16452cdbb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32541, 825, 238, 5, 25, "Input",ExpressionUUID->"03ef2ae1-e595-754c-97b3-8418d5dbbbd1"],
+Cell[32782, 832, 2834, 62, 50, "Output",ExpressionUUID->"4f6424aa-00d8-2748-bc5b-422c34a5a791"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35653, 899, 238, 5, 25, "Input",ExpressionUUID->"326d412d-3394-7640-bc7a-0b160bb15cb4"],
+Cell[35894, 906, 2201, 51, 50, "Output",ExpressionUUID->"76c66fc3-89ae-f843-8363-aeaeb72d9e89"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38132, 962, 238, 5, 25, "Input",ExpressionUUID->"3d90f5f6-5652-0047-9e65-be5d2fd170c2"],
+Cell[38373, 969, 1105, 34, 30, "Output",ExpressionUUID->"64ebee9e-16fd-7541-a94a-e2646cc51b94"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39515, 1008, 240, 5, 25, "Input",ExpressionUUID->"5ad2f519-e7e6-0148-96e4-04da22d41ae8"],
+Cell[39758, 1015, 1050, 32, 30, "Output",ExpressionUUID->"cb28d413-79f9-2747-99ab-48b7350ad0b8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40845, 1052, 239, 5, 25, "Input",ExpressionUUID->"57147a40-e79f-2641-9111-63f68b84da1b"],
+Cell[41087, 1059, 398, 11, 30, "Output",ExpressionUUID->"6f1c852b-75b2-b241-a1c9-daad73fed0b2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41522, 1075, 709, 16, 88, "Input",ExpressionUUID->"ace81b44-8b59-0744-932e-281c0b4f0698"],
+Cell[CellGroupData[{
+Cell[42256, 1095, 947, 23, 21, "Print",ExpressionUUID->"dd713d7a-d251-dc40-9db5-552b19bed018"],
+Cell[43206, 1120, 1873, 46, 21, "Print",ExpressionUUID->"1a2e5e2b-0594-af48-965f-10b2c449d8fe"],
+Cell[45082, 1168, 1951, 48, 21, "Print",ExpressionUUID->"7afa1764-4867-4f42-bafa-e04778db7da2"],
+Cell[47036, 1218, 4121, 86, 39, "Print",ExpressionUUID->"fb653bc5-a53f-9147-ba40-662d711ef84a"],
+Cell[51160, 1306, 5146, 104, 55, "Print",ExpressionUUID->"2c0c3b74-4aee-fc4e-8a99-079166ba9055"],
+Cell[56309, 1412, 5785, 117, 55, "Print",ExpressionUUID->"6c3ca4e4-1150-e24a-a91b-d5c25d0812da"],
+Cell[62097, 1531, 5904, 119, 73, "Print",ExpressionUUID->"a3f32a95-3a0f-7740-8d0c-6972794ac983"],
+Cell[68004, 1652, 7058, 155, 73, "Print",ExpressionUUID->"32946ed7-9f68-c34c-b9e1-a62856901472"],
+Cell[75065, 1809, 8421, 166, 92, "Print",ExpressionUUID->"f88130a7-b982-1942-8a25-68e74a711eec"],
+Cell[83489, 1977, 8656, 199, 76, "Print",ExpressionUUID->"02897133-7152-6844-839e-5256ca702d23"],
+Cell[92148, 2178, 9071, 206, 76, "Print",ExpressionUUID->"f2e75b03-1167-c846-8c67-aff949fa4fd1"],
+Cell[101222, 2386, 2619, 65, 21, "Print",ExpressionUUID->"675b0a65-f78d-1e42-b571-a638476f9abd"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

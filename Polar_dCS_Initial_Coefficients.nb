@@ -1,0 +1,4772 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    188077,       4764]
+NotebookOptionsPosition[    182321,       4663]
+NotebookOutlinePosition[    182771,       4681]
+CellTagsIndexPosition[    182728,       4678]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "The", " ", "coefficient", " ", "matrices", " ", "of", " ", "the", " ", 
+      "initial", " ", "16"}], "-", 
+     RowBox[{
+     "term", " ", "recursion", " ", "relation", " ", "for", " ", "the", " ", 
+      "slow", " ", "rotation", " ", "and", " ", "weak", " ", "coupling", " ", 
+      "regime", " ", "of", " ", "dCS", " ", "gravity", " ", "are", " ", 
+      "provided", " ", 
+      RowBox[{"below", ".", " ", "The"}], " ", "index", " ", "in", 
+      " ", "\"\<GammaCoeff[]\>\"", " ", "represents", " ", "the", " ", 
+      "i"}]}], "=", "1"}], ",", " ", 
+   RowBox[{"i", "=", "0"}], ",", " ", "...", " ", ",", " ", 
+   RowBox[{"i", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "14"}], " ", "coefficient", " ", "of", " ", "equation", " ",
+       "30.", " ", "The", " ", "elements", " ", "of", " ", "each", " ", 
+      "matrix", " ", "already", " ", "consist", " ", "of", " ", "the", " ", 
+      "notation", " ", "M"}], "=", "1"}]}], ",", " ", 
+   RowBox[{
+   "which", " ", "is", " ", "the", " ", "reason", " ", "why", " ", "the", " ",
+     "mass", " ", "of", " ", "the", " ", "black", " ", "hole", " ", "does", " ",
+     "not", " ", "appear", " ", 
+    RowBox[{"anywhere", "."}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.984779729465412*^9, 
+  3.9847797792546825`*^9}},ExpressionUUID->"cc883725-bd70-a247-aa06-\
+624d1287641a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.984779146980074*^9, 3.9847791496729336`*^9}},
+ CellLabel->
+  "In[165]:=",ExpressionUUID->"de24e418-84b2-2b49-a968-5cd92cee9845"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "8"}], " ", "l", " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "l"}], ")"}], " ", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", "l", "+", 
+     SuperscriptBox["l", "2"]}], ")"}], "4"], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "n"}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"448", " ", "n"}], "-", 
+    RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "448"}], "+", 
+       RowBox[{"709", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{"448", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}]}], 
+   ")"}], " ", "\[Omega]"}]], "Output",
+ CellChangeTimes->{3.9847791508342457`*^9},
+ CellLabel->
+  "Out[165]=",ExpressionUUID->"0d026ab0-6106-f148-9392-678f2678a2fa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", "0", "]"}]], "Input",
+ CellChangeTimes->{3.9847791698110504`*^9},
+ CellLabel->
+  "In[166]:=",ExpressionUUID->"89b8e4d3-8bbe-6c49-a713-07bd9e6966b0"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", "l", "+", 
+     SuperscriptBox["l", "2"]}], ")"}], "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"3584", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"2", " ", "l"}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "2"]}], "+", 
+       SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      RowBox[{"3", "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "3"]}], "+", 
+       SuperscriptBox["l", "4"], "+", 
+       RowBox[{"14", " ", 
+        SuperscriptBox["n", "2"]}], "+", 
+       RowBox[{"n", " ", 
+        RowBox[{"(", 
+         RowBox[{"2", "-", 
+          RowBox[{"64", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "-", 
+       RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+       RowBox[{"32", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"2", " ", "n", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], 
+          "-", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"32", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "n", "+", 
+          SuperscriptBox["n", "2"], "-", 
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"16", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"6", " ", 
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"24", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "709"}], "-", 
+             RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"4944", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"24", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "709"}], "-", 
+             RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"4944", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"2511", "+", 
+             RowBox[{"12832", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"112", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "3"}], "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"5", "+", 
+                RowBox[{"34", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"152", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "392"}], "-", 
+             RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"5", "+", 
+                RowBox[{"34", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"95928", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"12", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "943"}], "-", 
+             RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"275984", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"5", "+", 
+                RowBox[{"22", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"136", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "5113"}], "-", 
+             RowBox[{"5672", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"5", "+", 
+                RowBox[{"22", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"408432", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3584", " ", "\[Omega]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"3", " ", "\[ImaginaryI]"}], "+", 
+             RowBox[{"30", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+             RowBox[{"22", " ", "\[Omega]"}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2745"}], "-", 
+             RowBox[{"17016", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"930736", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.9847791716837864`*^9},
+ CellLabel->
+  "Out[166]=",ExpressionUUID->"ba6150b9-bf93-ba45-a4fe-ef0b4dbc0d55"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "1"}], "]"}]], "Input",
+ CellChangeTimes->{3.98477921970636*^9},
+ CellLabel->
+  "In[167]:=",ExpressionUUID->"4fccb0f4-8df4-af48-8674-e55d4d2c1f46"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "2"}], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "+", "l", "+", 
+    SuperscriptBox["l", "2"]}], ")"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"1792", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"2", " ", "l"}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "2"]}], "+", 
+       SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      RowBox[{"74", "+", 
+       RowBox[{"79", " ", 
+        SuperscriptBox["n", "2"]}], "+", 
+       RowBox[{"n", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "132"}], "-", 
+          RowBox[{"416", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+       RowBox[{"312", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+       RowBox[{"400", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{"3", " ", 
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"9", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "8"}], "-", 
+             RowBox[{"72", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}],
+           "+", 
+          RowBox[{"16", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[ImaginaryI]"}], "-", 
+             RowBox[{"9", " ", "\[Omega]"}]}], ")"}], " ", "\[Omega]"}]}], 
+         ")"}]}], "+", 
+       RowBox[{"l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], "+", 
+          RowBox[{"26", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "24"}], "-", 
+             RowBox[{"208", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+            ")"}]}], "+", 
+          RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"416", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{"8", "+", 
+          SuperscriptBox["n", "2"], "-", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"16", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"8", "+", 
+          SuperscriptBox["n", "2"], "-", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"16", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "7"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"5", "+", 
+             RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "34645"}], "-", 
+             RowBox[{
+             "2836", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+             RowBox[{"43976", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "8"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"5", "+", 
+             RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "34645"}], "-", 
+             RowBox[{
+             "2836", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+             RowBox[{"43976", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"11", "-", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "45069"}], "+", 
+             RowBox[{"159176", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"11", "+", 
+             RowBox[{"3", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", 
+                RowBox[{"11", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"112", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"3", " ", "\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "26713"}], "-", 
+             RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", 
+                RowBox[{"11", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"175674", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"10", "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "66"}], "+", 
+                RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"48", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "90035"}], "-", 
+             RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "66"}], "+", 
+                RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"2144316", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "36"}], "+", 
+                RowBox[{"85", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"280", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "238319"}], "-", 
+             RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "36"}], "+", 
+                RowBox[{"85", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"2854300", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"17", "+", 
+             RowBox[{"3", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "56"}], "+", 
+                RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"504", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "142023"}], "-", 
+             RowBox[{"2127", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "56"}], "+", 
+                RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"2887414", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "114"}], "+", 
+                RowBox[{"187", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"476", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "300203"}], "-", 
+             RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "114"}], "+", 
+                RowBox[{"187", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"5214692", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"41", "+", 
+             RowBox[{"16", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "18"}], "+", 
+                RowBox[{"23", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"512", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "407773"}], "-", 
+             RowBox[{"22688", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "18"}], "+", 
+                RowBox[{"23", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"9141344", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.984779220242264*^9},
+ CellLabel->
+  "Out[167]=",ExpressionUUID->"f1f3dc5d-3ce8-d742-a391-c8187891cd54"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847793766459064`*^9, 3.984779377807148*^9}},
+ CellLabel->
+  "In[168]:=",ExpressionUUID->"1766d5ff-2f0d-0346-908a-41d757f42fbe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"21504", " ", "l", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"2", " ", "l"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "2"]}], "+", 
+     SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+   RowBox[{"(", 
+    RowBox[{"117", "+", 
+     RowBox[{"38", " ", 
+      SuperscriptBox["n", "2"]}], "+", 
+     RowBox[{"n", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "130"}], "-", 
+        RowBox[{"232", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+     RowBox[{"376", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+     RowBox[{"320", " ", 
+      SuperscriptBox["\[Omega]", "2"]}], "+", 
+     RowBox[{"2", " ", "l", " ", 
+      RowBox[{"(", 
+       RowBox[{"21", "+", 
+        RowBox[{"11", " ", 
+         SuperscriptBox["n", "2"]}], "+", 
+        RowBox[{"n", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "31"}], "-", 
+           RowBox[{"88", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+        RowBox[{"124", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"176", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+     RowBox[{"6", " ", 
+      SuperscriptBox["l", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"8", "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["n", "2"]}], "+", 
+        RowBox[{"n", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "11"}], "-", 
+           RowBox[{"32", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+        RowBox[{"44", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"64", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["l", "3"], " ", 
+      RowBox[{"(", 
+       RowBox[{"3", "+", 
+        SuperscriptBox["n", "2"], "+", 
+        RowBox[{"n", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2"}], "-", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+        RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"16", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{"3", "+", 
+        SuperscriptBox["n", "2"], "+", 
+        RowBox[{"n", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2"}], "-", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+        RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"16", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+  RowBox[{"m", " ", "s", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"40", " ", 
+      SuperscriptBox["l", "9"], " ", 
+      RowBox[{"(", 
+       RowBox[{"2688", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "75999"}], "+", 
+           RowBox[{"14600", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"8", " ", 
+      SuperscriptBox["l", "10"], " ", 
+      RowBox[{"(", 
+       RowBox[{"2688", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "75999"}], "+", 
+           RowBox[{"14600", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"12", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1792", " ", 
+         RowBox[{"(", 
+          RowBox[{"13", "+", 
+           RowBox[{"4", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "704883"}], "+", 
+           RowBox[{"940496", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["l", "7"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"21504", " ", 
+         RowBox[{"(", 
+          RowBox[{"3", "+", 
+           RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"8", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5942991"}], "-", 
+           RowBox[{"68064", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"12139664", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["l", "8"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"10752", " ", 
+         RowBox[{"(", 
+          RowBox[{"21", "+", 
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"16", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "10502931"}], "-", 
+           RowBox[{"68064", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"13015664", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", "l", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1344", " ", 
+         RowBox[{"(", 
+          RowBox[{"121", "+", 
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "65"}], "+", 
+              RowBox[{"38", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"216", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "5417247"}], "-", 
+           RowBox[{"8508", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "65"}], "+", 
+              RowBox[{"38", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"16191568", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["l", "6"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"672", " ", 
+         RowBox[{"(", 
+          RowBox[{"115", "+", 
+           RowBox[{"72", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "5"}], "+", 
+              RowBox[{"4", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"1072", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "10440765"}], "-", 
+           RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "5"}], "+", 
+              RowBox[{"4", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"33402608", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2688", " ", 
+         RowBox[{"(", 
+          RowBox[{"213", "+", 
+           RowBox[{"28", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "23"}], "+", 
+              RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"872", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "21568497"}], "-", 
+           RowBox[{"119112", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "23"}], "+", 
+              RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"83022592", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "5"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1344", " ", 
+         RowBox[{"(", 
+          RowBox[{"177", "+", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "107"}], "+", 
+              RowBox[{"80", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"2320", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "27427569"}], "-", 
+           RowBox[{"17016", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "107"}], "+", 
+              RowBox[{"80", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"116664400", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "3"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1344", " ", 
+         RowBox[{"(", 
+          RowBox[{"419", "+", 
+           RowBox[{"72", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "25"}], "+", 
+              RowBox[{"16", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"3312", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "27560523"}], "-", 
+           RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "25"}], "+", 
+              RowBox[{"16", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"132249136", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["l", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2688", " ", 
+         RowBox[{"(", 
+          RowBox[{"341", "+", 
+           RowBox[{"8", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "197"}], "+", 
+              RowBox[{"134", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"3440", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "62446119"}], "-", 
+           RowBox[{"34032", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "197"}], "+", 
+              RowBox[{"134", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"298947920", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{3.98477937983255*^9},
+ CellLabel->
+  "Out[168]=",ExpressionUUID->"a17cc715-f014-f24d-993d-746f17845712"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "3"}], "]"}]], "Input",
+ CellChangeTimes->{3.9847793878855495`*^9},
+ CellLabel->
+  "In[169]:=",ExpressionUUID->"4690d26f-9747-a64c-a765-f898ad0cae1a"],
+
+Cell[BoxData[
+ RowBox[{"2", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "16128"}], " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      RowBox[{"253", "-", 
+       RowBox[{"198", " ", "n"}], "+", 
+       RowBox[{"39", " ", 
+        SuperscriptBox["n", "2"]}], "+", 
+       RowBox[{"684", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+       RowBox[{"276", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+       RowBox[{"480", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{"4", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{"50", "-", 
+          RowBox[{"42", " ", "n"}], "+", 
+          RowBox[{"9", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"168", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"72", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"144", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"6", " ", 
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"38", "-", 
+          RowBox[{"32", " ", "n"}], "+", 
+          RowBox[{"7", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"128", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"56", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"112", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"28", "-", 
+          RowBox[{"24", " ", "n"}], "+", 
+          RowBox[{"6", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"48", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"96", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{"14", "-", 
+          RowBox[{"12", " ", "n"}], "+", 
+          RowBox[{"3", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"48", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"24", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"48", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"20", " ", 
+        SuperscriptBox["l", "9"], " ", 
+        RowBox[{"(", 
+         RowBox[{"2464", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "291347"}], "+", 
+             RowBox[{"8630", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "10"], " ", 
+        RowBox[{"(", 
+         RowBox[{"2464", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "291347"}], "+", 
+             RowBox[{"8630", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"16", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"112", " ", 
+           RowBox[{"(", 
+            RowBox[{"377", "+", 
+             RowBox[{"24", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2827077"}], "+", 
+             RowBox[{"1759976", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "8"], " ", 
+        RowBox[{"(", 
+         RowBox[{"32704", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "6227977"}], "+", 
+             RowBox[{"2250460", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["l", "7"], " ", 
+        RowBox[{"(", 
+         RowBox[{"28448", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "8085749"}], "+", 
+             RowBox[{"4371470", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2688", " ", 
+           RowBox[{"(", 
+            RowBox[{"260", "+", 
+             RowBox[{"9", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "33"}], "+", 
+                RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"352", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "56131075"}], "-", 
+             RowBox[{"38286", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "33"}], "+", 
+                RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"65281732", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"461", "+", 
+             RowBox[{"108", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"432", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "132833563"}], "-", 
+             RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"125594904", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1577", "+", 
+             RowBox[{"108", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "20"}], "+", 
+                RowBox[{"9", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"3792", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "129014063"}], "-", 
+             RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "20"}], "+", 
+                RowBox[{"9", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"198184112", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"725", "+", 
+             RowBox[{"324", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1296", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "196572865"}], "-", 
+             RowBox[{"459432", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"255108472", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"2531", "+", 
+             RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "61"}], "+", 
+                RowBox[{"25", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"4608", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "214656883"}], "-", 
+             RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "61"}], "+", 
+                RowBox[{"25", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"297827656", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3584", " ", 
+           RowBox[{"(", 
+            RowBox[{"533", "+", 
+             RowBox[{"27", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "30"}], "+", 
+                RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1356", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "252247921"}], "-", 
+             RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "30"}], "+", 
+                RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"408010848", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.9847793882496243`*^9},
+ CellLabel->
+  "Out[169]=",ExpressionUUID->"f84b6c7d-e157-034d-b608-91c881959fec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "4"}], "]"}]], "Input",
+ CellChangeTimes->{3.984779395724346*^9},
+ CellLabel->
+  "In[170]:=",ExpressionUUID->"fbceeb19-9970-2a46-83e1-f7ac7407fb84"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"96768", " ", "l", " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+   RowBox[{"(", 
+    RowBox[{"109", "-", 
+     RowBox[{"66", " ", "n"}], "+", 
+     RowBox[{"10", " ", 
+      SuperscriptBox["n", "2"]}], "+", 
+     RowBox[{"264", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+     RowBox[{"80", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+     RowBox[{"160", " ", 
+      SuperscriptBox["\[Omega]", "2"]}], "+", 
+     RowBox[{"l", " ", 
+      RowBox[{"(", 
+       RowBox[{"37", "-", 
+        RowBox[{"24", " ", "n"}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["n", "2"]}], "+", 
+        RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"32", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+        RowBox[{"64", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["l", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"37", "-", 
+        RowBox[{"24", " ", "n"}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["n", "2"]}], "+", 
+        RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+        RowBox[{"32", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+        RowBox[{"64", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+  RowBox[{"m", " ", "s", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"20", " ", 
+      SuperscriptBox["l", "9"], " ", 
+      RowBox[{"(", 
+       RowBox[{"1568", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1237999"}], "+", 
+           RowBox[{"5496", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["l", "10"], " ", 
+      RowBox[{"(", 
+       RowBox[{"1568", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1237999"}], "+", 
+           RowBox[{"5496", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"16", " ", 
+      SuperscriptBox["l", "7"], " ", 
+      RowBox[{"(", 
+       RowBox[{"22736", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "24174353"}], "+", 
+           RowBox[{"3400584", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "8"], " ", 
+      RowBox[{"(", 
+       RowBox[{"68992", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "66918691"}], "+", 
+           RowBox[{"6883608", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"896", " ", 
+         RowBox[{"(", 
+          RowBox[{"1193", "+", 
+           RowBox[{"108", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "145835709"}], "+", 
+           RowBox[{"48295936", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["l", "6"], " ", 
+      RowBox[{"(", 
+       RowBox[{"232064", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "233965907"}], "+", 
+           RowBox[{"68283160", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"8", " ", 
+      SuperscriptBox["l", "5"], " ", 
+      RowBox[{"(", 
+       RowBox[{"205408", "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "194727379"}], "+", 
+           RowBox[{"78678360", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", "l", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2688", " ", 
+         RowBox[{"(", 
+          RowBox[{"1325", "+", 
+           RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "33"}], "+", 
+              RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"756", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "655257905"}], "-", 
+           RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "33"}], "+", 
+              RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"353120448", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "3"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"448", " ", 
+         RowBox[{"(", 
+          RowBox[{"7801", "+", 
+           RowBox[{"864", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"3456", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1257504079"}], "-", 
+           RowBox[{"612576", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"760182224", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["l", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"896", " ", 
+         RowBox[{"(", 
+          RowBox[{"5227", "+", 
+           RowBox[{"432", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"1728", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2354819291"}], "-", 
+           RowBox[{"612576", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"1253075760", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["l", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1792", " ", 
+         RowBox[{"(", 
+          RowBox[{"5801", "+", 
+           RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "45"}], "+", 
+              RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"3132", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+        RowBox[{"\[Pi]", " ", 
+         SuperscriptBox["\[Alpha]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "2365420331"}], "-", 
+           RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "45"}], "+", 
+              RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+           RowBox[{"1370553888", " ", 
+            SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{3.984779396209116*^9},
+ CellLabel->
+  "Out[170]=",ExpressionUUID->"877cdd63-03d1-3a40-a11b-659fcbac46e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "5"}], "]"}]], "Input",
+ CellChangeTimes->{3.9847794078919945`*^9},
+ CellLabel->
+  "In[171]:=",ExpressionUUID->"2c6d0d67-2f43-ad4d-997f-60cf4c2cb7fe"],
+
+Cell[BoxData[
+ RowBox[{"12", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "24192"}], " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "l"}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "4"}], "+", "n", "-", 
+        RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], "2"], " ",
+      "\[Omega]"}], "-", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"35", " ", 
+        SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "76267"}], "+", 
+          RowBox[{"36", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"7", " ", 
+        SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "76267"}], "+", 
+          RowBox[{"36", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"896", " ", 
+        RowBox[{"(", 
+         RowBox[{"823", "+", 
+          RowBox[{"36", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"6", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "34841477"}], "+", 
+          RowBox[{"6593776", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "8"], " ", 
+        RowBox[{"(", 
+         RowBox[{"2240", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "18757865"}], "+", 
+             RowBox[{"465488", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "7"], " ", 
+        RowBox[{"(", 
+         RowBox[{"4480", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "29507695"}], "+", 
+             RowBox[{"927196", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{"19040", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "85546503"}], "+", 
+             RowBox[{"7289662", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"7", " ", 
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"50112", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "79784473"}], "+", 
+             RowBox[{"14526408", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{"82880", "+", 
+          RowBox[{"2", " ", "\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "158968201"}], "+", 
+             RowBox[{"18626446", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"1019", "+", 
+             RowBox[{"27", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"108", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "205230568"}], "-", 
+             RowBox[{"19143", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"51966440", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{"573888", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "650601217"}], "+", 
+             RowBox[{"143442496", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"2651", "+", 
+             RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"216", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "691807439"}], "-", 
+             RowBox[{"38286", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"169754000", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.9847794103296165`*^9},
+ CellLabel->
+  "Out[171]=",ExpressionUUID->"43daf350-10b8-6348-a730-1bdadd529bc5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "6"}], "]"}]], "Input",
+ CellChangeTimes->{3.9847794205662365`*^9},
+ CellLabel->
+  "In[172]:=",ExpressionUUID->"a23ad6df-16f8-3544-a879-47a5a001988b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "2"}], " ", "m", " ", "s", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"13006700", " ", 
+     SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"2601340", " ", 
+     SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "-", 
+    RowBox[{"7", " ", 
+     SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "17658473"}], "+", 
+       RowBox[{"67320", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "-", 
+    RowBox[{"28", " ", 
+     SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "14871323"}], "+", 
+       RowBox[{"67320", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "5717376"}], "+", 
+       RowBox[{"2", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"4945669771", "-", 
+          RowBox[{"484776864", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "955584"}], "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"6334075223", "-", 
+          RowBox[{"360588216", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{"l", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "4878720"}], "+", 
+       RowBox[{"4", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1578187429", "-", 
+          RowBox[{"173327136", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"16", " ", 
+     SuperscriptBox["l", "6"], " ", 
+     RowBox[{"(", 
+      RowBox[{"2436", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "92784083"}], "+", 
+          RowBox[{"1924044", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["l", "5"], " ", 
+     RowBox[{"(", 
+      RowBox[{"58464", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1525437235"}], "+", 
+          RowBox[{"42878376", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"6", " ", 
+     RowBox[{"(", 
+      RowBox[{"980224", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "630696623"}], "+", 
+          RowBox[{"66148704", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["l", "3"], " ", 
+     RowBox[{"(", 
+      RowBox[{"858144", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "4021571407"}], "+", 
+          RowBox[{"290223816", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.984779420987604*^9},
+ CellLabel->
+  "Out[172]=",ExpressionUUID->"a1ac2081-db3c-ab40-8ef8-474ce5e51dc1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847794311907578`*^9, 3.9847794318827305`*^9}},
+ CellLabel->
+  "In[173]:=",ExpressionUUID->"4366ec8f-d27b-ce4d-abde-43cade507b1d"],
+
+Cell[BoxData[
+ RowBox[{"4", " ", "m", " ", "s", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"158649556", " ", 
+     SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"44549674", " ", 
+     SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"3258190", " ", 
+     SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"651638", " ", 
+     SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "5"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"1628691187", "-", 
+       RowBox[{"6917400", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{"5", " ", 
+     SuperscriptBox["l", "6"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"144685349", "-", 
+       RowBox[{"461160", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1229760"}], "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"8261538991", "-", 
+          RowBox[{"285211476", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "84672"}], "+", 
+       RowBox[{"4", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1025345653", "-", 
+          RowBox[{"14877090", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "3"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "169344"}], "-", 
+       RowBox[{"127", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "44620903"}], "+", 
+          RowBox[{"846360", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"192", " ", 
+     RowBox[{"(", 
+      RowBox[{"12390", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "21398947"}], "+", 
+          RowBox[{"1112979", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"2", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"572544", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2837048023"}], "+", 
+          RowBox[{"116310258", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.9847794322937317`*^9},
+ CellLabel->
+  "Out[173]=",ExpressionUUID->"28200a87-40b7-0449-9a1f-188f8ab7b02f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "8"}], "]"}]], "Input",
+ CellChangeTimes->{3.984779437706108*^9},
+ CellLabel->
+  "In[174]:=",ExpressionUUID->"20b16790-0820-bc46-96c4-5528c43e6dc3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "3"}], " ", "m", " ", "s", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"1540214440", " ", 
+     SuperscriptBox["l", "5"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"630015102", " ", 
+     SuperscriptBox["l", "6"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"101433808", " ", 
+     SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"27211117", " ", 
+     SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"1235110", " ", 
+     SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"247022", " ", 
+     SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"]}], "+", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["l", "4"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"2446255027", "-", 
+       RowBox[{"5629176", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{"16", " ", 
+     SuperscriptBox["l", "3"], " ", "\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"458366579", "-", 
+       RowBox[{"1407294", " ", 
+        SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["l", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "290304"}], "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"13066086109", "-", 
+          RowBox[{"126015696", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"2", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"145152", "+", 
+       RowBox[{"13", " ", "\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "370743107"}], "+", 
+          RowBox[{"4413744", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+    RowBox[{"36", " ", 
+     RowBox[{"(", 
+      RowBox[{"38976", "+", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox["\[Alpha]", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "240456441"}], "+", 
+          RowBox[{"5199904", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.984779438299135*^9},
+ CellLabel->
+  "Out[174]=",ExpressionUUID->"aefa798e-3f73-614d-9470-4b4c8c821b6d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "9"}], "]"}]], "Input",
+ CellChangeTimes->{3.984779444394209*^9},
+ CellLabel->
+  "In[175]:=",ExpressionUUID->"aec885cb-dea4-c94b-af14-a470a00a5c42"],
+
+Cell[BoxData[
+ RowBox[{"6", " ", "m", " ", "s", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "129024"}], "+", 
+    RowBox[{"\[Pi]", " ", 
+     SuperscriptBox["\[Alpha]", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"4977498548", "+", 
+       RowBox[{"2416665593", " ", 
+        SuperscriptBox["l", "3"]}], "+", 
+       RowBox[{"1491488501", " ", 
+        SuperscriptBox["l", "4"]}], "+", 
+       RowBox[{"349473332", " ", 
+        SuperscriptBox["l", "5"]}], "+", 
+       RowBox[{"132681308", " ", 
+        SuperscriptBox["l", "6"]}], "+", 
+       RowBox[{"13969418", " ", 
+        SuperscriptBox["l", "7"]}], "+", 
+       RowBox[{"3607487", " ", 
+        SuperscriptBox["l", "8"]}], "+", 
+       RowBox[{"76755", " ", 
+        SuperscriptBox["l", "9"]}], "+", 
+       RowBox[{"15351", " ", 
+        SuperscriptBox["l", "10"]}], "-", 
+       RowBox[{"34077024", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{"l", " ", 
+        RowBox[{"(", 
+         RowBox[{"4334178830", "-", 
+          RowBox[{"9013032", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"5486571281", "-", 
+          RowBox[{"9013032", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.9847794449877586`*^9},
+ CellLabel->
+  "Out[175]=",ExpressionUUID->"25349934-57d5-6b40-9632-adc9977d36f9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "10"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847794492412605`*^9, 3.984779449418482*^9}},
+ CellLabel->
+  "In[176]:=",ExpressionUUID->"f307373a-1ab4-f649-9d4f-bd4c8063875e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "9"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+  SuperscriptBox["\[Alpha]", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{"2746523852", "+", 
+    RowBox[{"1794857596", " ", "l"}], "+", 
+    RowBox[{"2129838242", " ", 
+     SuperscriptBox["l", "2"]}], "+", 
+    RowBox[{"690058462", " ", 
+     SuperscriptBox["l", "3"]}], "+", 
+    RowBox[{"395554291", " ", 
+     SuperscriptBox["l", "4"]}], "+", 
+    RowBox[{"61420050", " ", 
+     SuperscriptBox["l", "5"]}], "+", 
+    RowBox[{"21789980", " ", 
+     SuperscriptBox["l", "6"]}], "+", 
+    RowBox[{"1128540", " ", 
+     SuperscriptBox["l", "7"]}], "+", 
+    RowBox[{"282135", " ", 
+     SuperscriptBox["l", "8"]}], "-", 
+    RowBox[{"3519936", " ", 
+     SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.9847794497314186`*^9},
+ CellLabel->
+  "Out[176]=",ExpressionUUID->"ce9bfebe-e4f1-a34f-90bf-d6de49fb762d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "11"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9847794556368027`*^9, 3.9847794558083973`*^9}},
+ CellLabel->
+  "In[177]:=",ExpressionUUID->"2fbfa382-73e3-6a41-933e-f659879fe02b"],
+
+Cell[BoxData[
+ RowBox[{"54", " ", 
+  RowBox[{"(", 
+   RowBox[{"265598736", "+", 
+    RowBox[{"122276090", " ", "l"}], "+", 
+    RowBox[{"136547869", " ", 
+     SuperscriptBox["l", "2"]}], "+", 
+    RowBox[{"28942327", " ", 
+     SuperscriptBox["l", "3"]}], "+", 
+    RowBox[{"15468086", " ", 
+     SuperscriptBox["l", "4"]}], "+", 
+    RowBox[{"1196307", " ", 
+     SuperscriptBox["l", "5"]}], "+", 
+    RowBox[{"398769", " ", 
+     SuperscriptBox["l", "6"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+  SuperscriptBox["\[Alpha]", "2"]}]], "Output",
+ CellChangeTimes->{3.984779456608757*^9},
+ CellLabel->
+  "Out[177]=",ExpressionUUID->"1e9fbb24-e37a-4a42-9cc5-f4334d10a70e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "12"}], "]"}]], "Input",
+ CellChangeTimes->{{3.98477946149378*^9, 3.9847794615564632`*^9}},
+ CellLabel->
+  "In[178]:=",ExpressionUUID->"b9babaef-feba-9a4d-99d7-3eb37f400513"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "27"}], " ", 
+  RowBox[{"(", 
+   RowBox[{"205127540", "+", 
+    RowBox[{"59272138", " ", "l"}], "+", 
+    RowBox[{"62527495", " ", 
+     SuperscriptBox["l", "2"]}], "+", 
+    RowBox[{"6510714", " ", 
+     SuperscriptBox["l", "3"]}], "+", 
+    RowBox[{"3255357", " ", 
+     SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+  SuperscriptBox["\[Alpha]", "2"]}]], "Output",
+ CellChangeTimes->{3.984779462040514*^9},
+ CellLabel->
+  "Out[178]=",ExpressionUUID->"b357ec07-391c-a743-8213-4a072cbdbf06"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "13"}], "]"}]], "Input",
+ CellChangeTimes->{{3.984779466088396*^9, 3.98477946615139*^9}},
+ CellLabel->
+  "In[179]:=",ExpressionUUID->"1e06b992-362c-ce4c-9f58-a7359c81f320"],
+
+Cell[BoxData[
+ RowBox[{"648", " ", 
+  RowBox[{"(", 
+   RowBox[{"1974383", "+", 
+    RowBox[{"269367", " ", "l"}], "+", 
+    RowBox[{"269367", " ", 
+     SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+  SuperscriptBox["\[Alpha]", "2"]}]], "Output",
+ CellChangeTimes->{3.984779466416506*^9},
+ CellLabel->
+  "Out[179]=",ExpressionUUID->"b34afdcd-49bf-7148-8649-18e2251235f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaCoeff", "[", 
+  RowBox[{"-", "14"}], "]"}]], "Input",
+ CellChangeTimes->{{3.984779469996956*^9, 3.984779470200096*^9}},
+ CellLabel->
+  "In[180]:=",ExpressionUUID->"df282671-d864-0645-974d-758d2081519d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "133923132"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+  SuperscriptBox["\[Alpha]", "2"]}]], "Output",
+ CellChangeTimes->{3.9847794705962296`*^9},
+ CellLabel->
+  "Out[180]=",ExpressionUUID->"e9149e96-2359-5741-b969-f8fc49151ed2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", 
+    RowBox[{"-", "14"}]}], ",", 
+   RowBox[{"i", "<=", "1"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<The coefficient for i=\>\"", ",", "i", 
+     ",", "\"\< is \[Gamma]=\>\"", ",", 
+     RowBox[{"GammaCoeff", "[", "i", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.984779664627098*^9, 3.984779679675728*^9}},
+ CellLabel->
+  "In[182]:=",ExpressionUUID->"1c2b0d5c-0c1c-5e4c-b180-9cef8c13bb1b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "14"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "133923132"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+    SuperscriptBox["\[Alpha]", "2"]}]}],
+  SequenceForm[
+  "The coefficient for i=", -14, " is \[Gamma]=", (-133923132) $CellContext`m 
+   Pi $CellContext`s $CellContext`\[Alpha]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680409975*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"7c99340e-248e-f840-9ccd-8ade330e6b9c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "13"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"648", " ", 
+    RowBox[{"(", 
+     RowBox[{"1974383", "+", 
+      RowBox[{"269367", " ", "l"}], "+", 
+      RowBox[{"269367", " ", 
+       SuperscriptBox["l", "2"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", 
+    " ", 
+    SuperscriptBox["\[Alpha]", "2"]}]}],
+  SequenceForm[
+  "The coefficient for i=", -13, " is \[Gamma]=", 
+   648 (1974383 + 269367 $CellContext`l + 
+    269367 $CellContext`l^2) $CellContext`m 
+   Pi $CellContext`s $CellContext`\[Alpha]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680409975*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"67556acf-76d0-f14b-b588-6c980792e7b2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "12"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "27"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"205127540", "+", 
+      RowBox[{"59272138", " ", "l"}], "+", 
+      RowBox[{"62527495", " ", 
+       SuperscriptBox["l", "2"]}], "+", 
+      RowBox[{"6510714", " ", 
+       SuperscriptBox["l", "3"]}], "+", 
+      RowBox[{"3255357", " ", 
+       SuperscriptBox["l", "4"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", 
+    " ", 
+    SuperscriptBox["\[Alpha]", "2"]}]}],
+  SequenceForm[
+  "The coefficient for i=", -12, 
+   " is \[Gamma]=", (-27) (205127540 + 59272138 $CellContext`l + 
+    62527495 $CellContext`l^2 + 6510714 $CellContext`l^3 + 
+    3255357 $CellContext`l^4) $CellContext`m 
+   Pi $CellContext`s $CellContext`\[Alpha]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680409975*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"8d0cc0bc-3afc-c747-8078-f4ba0b46bbc2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "11"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"54", " ", 
+    RowBox[{"(", 
+     RowBox[{"265598736", "+", 
+      RowBox[{"122276090", " ", "l"}], "+", 
+      RowBox[{"136547869", " ", 
+       SuperscriptBox["l", "2"]}], "+", 
+      RowBox[{"28942327", " ", 
+       SuperscriptBox["l", "3"]}], "+", 
+      RowBox[{"15468086", " ", 
+       SuperscriptBox["l", "4"]}], "+", 
+      RowBox[{"1196307", " ", 
+       SuperscriptBox["l", "5"]}], "+", 
+      RowBox[{"398769", " ", 
+       SuperscriptBox["l", "6"]}]}], ")"}], " ", "m", " ", "\[Pi]", " ", "s", 
+    " ", 
+    SuperscriptBox["\[Alpha]", "2"]}]}],
+  SequenceForm[
+  "The coefficient for i=", -11, " is \[Gamma]=", 
+   54 (265598736 + 122276090 $CellContext`l + 136547869 $CellContext`l^2 + 
+    28942327 $CellContext`l^3 + 15468086 $CellContext`l^4 + 
+    1196307 $CellContext`l^5 + 398769 $CellContext`l^6) $CellContext`m 
+   Pi $CellContext`s $CellContext`\[Alpha]^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680409975*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"17f4c704-6145-9d44-9e47-6fb07f947504"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "10"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "9"}], " ", "m", " ", "\[Pi]", " ", "s", " ", 
+    SuperscriptBox["\[Alpha]", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{"2746523852", "+", 
+      RowBox[{"1794857596", " ", "l"}], "+", 
+      RowBox[{"2129838242", " ", 
+       SuperscriptBox["l", "2"]}], "+", 
+      RowBox[{"690058462", " ", 
+       SuperscriptBox["l", "3"]}], "+", 
+      RowBox[{"395554291", " ", 
+       SuperscriptBox["l", "4"]}], "+", 
+      RowBox[{"61420050", " ", 
+       SuperscriptBox["l", "5"]}], "+", 
+      RowBox[{"21789980", " ", 
+       SuperscriptBox["l", "6"]}], "+", 
+      RowBox[{"1128540", " ", 
+       SuperscriptBox["l", "7"]}], "+", 
+      RowBox[{"282135", " ", 
+       SuperscriptBox["l", "8"]}], "-", 
+      RowBox[{"3519936", " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -10, " is \[Gamma]=", (-9) $CellContext`m 
+   Pi $CellContext`s $CellContext`\[Alpha]^2 (2746523852 + 
+    1794857596 $CellContext`l + 2129838242 $CellContext`l^2 + 
+    690058462 $CellContext`l^3 + 395554291 $CellContext`l^4 + 
+    61420050 $CellContext`l^5 + 21789980 $CellContext`l^6 + 
+    1128540 $CellContext`l^7 + 282135 $CellContext`l^8 - 
+    3519936 $CellContext`\[Omega]^2)],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680409975*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"c3d5b37b-53dc-154e-8bf2-99d41ebfa285"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "9"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"6", " ", "m", " ", "s", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "129024"}], "+", 
+      RowBox[{"\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"4977498548", "+", 
+         RowBox[{"2416665593", " ", 
+          SuperscriptBox["l", "3"]}], "+", 
+         RowBox[{"1491488501", " ", 
+          SuperscriptBox["l", "4"]}], "+", 
+         RowBox[{"349473332", " ", 
+          SuperscriptBox["l", "5"]}], "+", 
+         RowBox[{"132681308", " ", 
+          SuperscriptBox["l", "6"]}], "+", 
+         RowBox[{"13969418", " ", 
+          SuperscriptBox["l", "7"]}], "+", 
+         RowBox[{"3607487", " ", 
+          SuperscriptBox["l", "8"]}], "+", 
+         RowBox[{"76755", " ", 
+          SuperscriptBox["l", "9"]}], "+", 
+         RowBox[{"15351", " ", 
+          SuperscriptBox["l", "10"]}], "-", 
+         RowBox[{"34077024", " ", 
+          SuperscriptBox["\[Omega]", "2"]}], "+", 
+         RowBox[{"l", " ", 
+          RowBox[{"(", 
+           RowBox[{"4334178830", "-", 
+            RowBox[{"9013032", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"5486571281", "-", 
+            RowBox[{"9013032", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -9, " is \[Gamma]=", 
+   6 $CellContext`m $CellContext`s (-129024 + 
+    Pi $CellContext`\[Alpha]^2 (4977498548 + 2416665593 $CellContext`l^3 + 
+      1491488501 $CellContext`l^4 + 349473332 $CellContext`l^5 + 
+      132681308 $CellContext`l^6 + 13969418 $CellContext`l^7 + 
+      3607487 $CellContext`l^8 + 76755 $CellContext`l^9 + 
+      15351 $CellContext`l^10 - 
+      34077024 $CellContext`\[Omega]^2 + $CellContext`l (4334178830 - 
+        9013032 $CellContext`\[Omega]^2) + $CellContext`l^2 (5486571281 - 
+        9013032 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680425583*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"01d66c43-3e06-2948-80ba-5b652b50d14a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "8"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "3"}], " ", "m", " ", "s", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1540214440", " ", 
+       SuperscriptBox["l", "5"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"630015102", " ", 
+       SuperscriptBox["l", "6"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"101433808", " ", 
+       SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"27211117", " ", 
+       SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"1235110", " ", 
+       SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"247022", " ", 
+       SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "4"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"2446255027", "-", 
+         RowBox[{"5629176", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{"16", " ", 
+       SuperscriptBox["l", "3"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"458366579", "-", 
+         RowBox[{"1407294", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "290304"}], "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"13066086109", "-", 
+            RowBox[{"126015696", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"2", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"145152", "+", 
+         RowBox[{"13", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "370743107"}], "+", 
+            RowBox[{"4413744", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"36", " ", 
+       RowBox[{"(", 
+        RowBox[{"38976", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "240456441"}], "+", 
+            RowBox[{"5199904", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -8, 
+   " is \[Gamma]=", (-3) $CellContext`m $CellContext`s (
+    1540214440 $CellContext`l^5 Pi $CellContext`\[Alpha]^2 + 
+    630015102 $CellContext`l^6 Pi $CellContext`\[Alpha]^2 + 
+    101433808 $CellContext`l^7 Pi $CellContext`\[Alpha]^2 + 
+    27211117 $CellContext`l^8 Pi $CellContext`\[Alpha]^2 + 
+    1235110 $CellContext`l^9 Pi $CellContext`\[Alpha]^2 + 
+    247022 $CellContext`l^10 Pi $CellContext`\[Alpha]^2 + 
+    2 $CellContext`l^4 
+     Pi $CellContext`\[Alpha]^2 (2446255027 - 
+      5629176 $CellContext`\[Omega]^2) + 
+    16 $CellContext`l^3 
+     Pi $CellContext`\[Alpha]^2 (458366579 - 
+      1407294 $CellContext`\[Omega]^2) + $CellContext`l^2 (-290304 + 
+      Pi $CellContext`\[Alpha]^2 (13066086109 - 
+        126015696 $CellContext`\[Omega]^2)) - 
+    2 $CellContext`l (145152 + 
+     13 Pi $CellContext`\[Alpha]^2 (-370743107 + 
+       4413744 $CellContext`\[Omega]^2)) - 
+    36 (38976 + 
+     Pi $CellContext`\[Alpha]^2 (-240456441 + 
+       5199904 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680425583*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"ad61ac71-3bce-354d-9003-7a0f56054899"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "7"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"4", " ", "m", " ", "s", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"158649556", " ", 
+       SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"44549674", " ", 
+       SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"3258190", " ", 
+       SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"651638", " ", 
+       SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "5"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"1628691187", "-", 
+         RowBox[{"6917400", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{"5", " ", 
+       SuperscriptBox["l", "6"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"144685349", "-", 
+         RowBox[{"461160", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1229760"}], "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"8261538991", "-", 
+            RowBox[{"285211476", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "84672"}], "+", 
+         RowBox[{"4", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"1025345653", "-", 
+            RowBox[{"14877090", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "3"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "169344"}], "-", 
+         RowBox[{"127", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "44620903"}], "+", 
+            RowBox[{"846360", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"192", " ", 
+       RowBox[{"(", 
+        RowBox[{"12390", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "21398947"}], "+", 
+            RowBox[{"1112979", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"2", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"572544", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2837048023"}], "+", 
+            RowBox[{"116310258", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -7, " is \[Gamma]=", 
+   4 $CellContext`m $CellContext`s (
+    158649556 $CellContext`l^7 Pi $CellContext`\[Alpha]^2 + 
+    44549674 $CellContext`l^8 Pi $CellContext`\[Alpha]^2 + 
+    3258190 $CellContext`l^9 Pi $CellContext`\[Alpha]^2 + 
+    651638 $CellContext`l^10 Pi $CellContext`\[Alpha]^2 + $CellContext`l^5 
+     Pi $CellContext`\[Alpha]^2 (1628691187 - 
+      6917400 $CellContext`\[Omega]^2) + 
+    5 $CellContext`l^6 
+     Pi $CellContext`\[Alpha]^2 (144685349 - 
+      461160 $CellContext`\[Omega]^2) + $CellContext`l^2 (-1229760 + 
+      Pi $CellContext`\[Alpha]^2 (8261538991 - 
+        285211476 $CellContext`\[Omega]^2)) + $CellContext`l^4 (-84672 + 
+      4 Pi $CellContext`\[Alpha]^2 (1025345653 - 
+        14877090 $CellContext`\[Omega]^2)) + $CellContext`l^3 (-169344 - 127 
+      Pi $CellContext`\[Alpha]^2 (-44620903 + 
+       846360 $CellContext`\[Omega]^2)) - 
+    192 (12390 + 
+     Pi $CellContext`\[Alpha]^2 (-21398947 + 
+       1112979 $CellContext`\[Omega]^2)) - 
+    2 $CellContext`l (572544 + 
+     Pi $CellContext`\[Alpha]^2 (-2837048023 + 
+       116310258 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680425583*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"239997d5-fd23-f74d-bb4b-ecd26d96c3bb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "6"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "2"}], " ", "m", " ", "s", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"13006700", " ", 
+       SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "+", 
+      RowBox[{"2601340", " ", 
+       SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"]}], "-", 
+      RowBox[{"7", " ", 
+       SuperscriptBox["l", "8"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "17658473"}], "+", 
+         RowBox[{"67320", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "-", 
+      RowBox[{"28", " ", 
+       SuperscriptBox["l", "7"], " ", "\[Pi]", " ", 
+       SuperscriptBox["\[Alpha]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "14871323"}], "+", 
+         RowBox[{"67320", " ", 
+          SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "5717376"}], "+", 
+         RowBox[{"2", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"4945669771", "-", 
+            RowBox[{"484776864", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["l", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "955584"}], "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"6334075223", "-", 
+            RowBox[{"360588216", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{"l", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "4878720"}], "+", 
+         RowBox[{"4", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"1578187429", "-", 
+            RowBox[{"173327136", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"16", " ", 
+       SuperscriptBox["l", "6"], " ", 
+       RowBox[{"(", 
+        RowBox[{"2436", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "92784083"}], "+", 
+            RowBox[{"1924044", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "5"], " ", 
+       RowBox[{"(", 
+        RowBox[{"58464", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1525437235"}], "+", 
+            RowBox[{"42878376", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"6", " ", 
+       RowBox[{"(", 
+        RowBox[{"980224", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "630696623"}], "+", 
+            RowBox[{"66148704", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "3"], " ", 
+       RowBox[{"(", 
+        RowBox[{"858144", "+", 
+         RowBox[{"\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4021571407"}], "+", 
+            RowBox[{"290223816", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+     ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -6, 
+   " is \[Gamma]=", (-2) $CellContext`m $CellContext`s (
+    13006700 $CellContext`l^9 Pi $CellContext`\[Alpha]^2 + 
+    2601340 $CellContext`l^10 Pi $CellContext`\[Alpha]^2 - 7 $CellContext`l^8 
+    Pi $CellContext`\[Alpha]^2 (-17658473 + 67320 $CellContext`\[Omega]^2) - 
+    28 $CellContext`l^7 
+    Pi $CellContext`\[Alpha]^2 (-14871323 + 
+     67320 $CellContext`\[Omega]^2) + $CellContext`l^2 (-5717376 + 
+      2 Pi $CellContext`\[Alpha]^2 (4945669771 - 
+        484776864 $CellContext`\[Omega]^2)) + $CellContext`l^4 (-955584 + 
+      Pi $CellContext`\[Alpha]^2 (6334075223 - 
+        360588216 $CellContext`\[Omega]^2)) + $CellContext`l (-4878720 + 
+      4 Pi $CellContext`\[Alpha]^2 (1578187429 - 
+        173327136 $CellContext`\[Omega]^2)) - 
+    16 $CellContext`l^6 (2436 + 
+     Pi $CellContext`\[Alpha]^2 (-92784083 + 
+       1924044 $CellContext`\[Omega]^2)) - 
+    2 $CellContext`l^5 (58464 + 
+     Pi $CellContext`\[Alpha]^2 (-1525437235 + 
+       42878376 $CellContext`\[Omega]^2)) - 
+    6 (980224 + 
+     Pi $CellContext`\[Alpha]^2 (-630696623 + 
+       66148704 $CellContext`\[Omega]^2)) - 
+    2 $CellContext`l^3 (858144 + 
+     Pi $CellContext`\[Alpha]^2 (-4021571407 + 
+       290223816 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680425583*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"d32250bd-33d2-8243-bb40-295ca7084291"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "5"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"12", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "24192"}], " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "l"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "4"}], "+", "n", "-", 
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}], "2"],
+        " ", "\[Omega]"}], "-", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"35", " ", 
+          SuperscriptBox["l", "9"], " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "76267"}], "+", 
+            RowBox[{"36", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"7", " ", 
+          SuperscriptBox["l", "10"], " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "76267"}], "+", 
+            RowBox[{"36", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"896", " ", 
+          RowBox[{"(", 
+           RowBox[{"823", "+", 
+            RowBox[{"36", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"6", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "34841477"}], "+", 
+            RowBox[{"6593776", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "8"], " ", 
+          RowBox[{"(", 
+           RowBox[{"2240", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "18757865"}], "+", 
+               RowBox[{"465488", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "7"], " ", 
+          RowBox[{"(", 
+           RowBox[{"4480", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "29507695"}], "+", 
+               RowBox[{"927196", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "6"], " ", 
+          RowBox[{"(", 
+           RowBox[{"19040", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "85546503"}], "+", 
+               RowBox[{"7289662", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"7", " ", 
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{"50112", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "79784473"}], "+", 
+               RowBox[{"14526408", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "5"], " ", 
+          RowBox[{"(", 
+           RowBox[{"82880", "+", 
+            RowBox[{"2", " ", "\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "158968201"}], "+", 
+               RowBox[{"18626446", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"1019", "+", 
+               RowBox[{"27", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"108", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "205230568"}], "-", 
+               RowBox[{"19143", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"51966440", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"573888", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "650601217"}], "+", 
+               RowBox[{"143442496", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"2651", "+", 
+               RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"216", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "691807439"}], "-", 
+               RowBox[{"38286", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"169754000", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -5, " is \[Gamma]=", 
+   12 ((-24192) $CellContext`l (
+      1 + $CellContext`l) (-4 + $CellContext`n + 
+       Complex[0, -4] $CellContext`\[Omega])^2 $CellContext`\[Omega] - \
+$CellContext`m $CellContext`s (
+     35 $CellContext`l^9 
+      Pi $CellContext`\[Alpha]^2 (-76267 + 36 $CellContext`\[Omega]^2) + 
+     7 $CellContext`l^10 
+      Pi $CellContext`\[Alpha]^2 (-76267 + 36 $CellContext`\[Omega]^2) + 
+     896 (823 + 36 $CellContext`\[Omega]^2) + 
+     6 Pi $CellContext`\[Alpha]^2 (-34841477 + 
+       6593776 $CellContext`\[Omega]^2) + $CellContext`l^8 (2240 + 
+       Pi $CellContext`\[Alpha]^2 (-18757865 + 
+         465488 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^7 (4480 + 
+       Pi $CellContext`\[Alpha]^2 (-29507695 + 
+         927196 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^6 (19040 + 
+       Pi $CellContext`\[Alpha]^2 (-85546503 + 
+         7289662 $CellContext`\[Omega]^2)) + 
+     7 $CellContext`l^4 (50112 + 
+       Pi $CellContext`\[Alpha]^2 (-79784473 + 
+         14526408 $CellContext`\[Omega]^2)) + $CellContext`l^5 (82880 + 
+       2 Pi $CellContext`\[Alpha]^2 (-158968201 + 
+         18626446 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l (
+       448 (1019 + Complex[0, 27] (-4 + $CellContext`n) $CellContext`\[Omega] + 
+         108 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-205230568 + 
+         Complex[0, -19143] (-4 + $CellContext`n) $CellContext`\[Omega] + 
+         51966440 $CellContext`\[Omega]^2)) + $CellContext`l^3 (573888 + 
+       Pi $CellContext`\[Alpha]^2 (-650601217 + 
+         143442496 $CellContext`\[Omega]^2)) + $CellContext`l^2 (
+       448 (2651 + Complex[0, 54] (-4 + $CellContext`n) $CellContext`\[Omega] + 
+         216 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-691807439 + 
+         Complex[0, -38286] (-4 + $CellContext`n) $CellContext`\[Omega] + 
+         169754000 $CellContext`\[Omega]^2))))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680441208*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"a4ec4d4e-9d19-3547-900e-dd444de18af6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "4"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"96768", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      RowBox[{"109", "-", 
+       RowBox[{"66", " ", "n"}], "+", 
+       RowBox[{"10", " ", 
+        SuperscriptBox["n", "2"]}], "+", 
+       RowBox[{"264", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+       RowBox[{"80", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+       RowBox[{"160", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{"l", " ", 
+        RowBox[{"(", 
+         RowBox[{"37", "-", 
+          RowBox[{"24", " ", "n"}], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"32", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"64", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"37", "-", 
+          RowBox[{"24", " ", "n"}], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"32", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+          RowBox[{"64", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"20", " ", 
+        SuperscriptBox["l", "9"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1568", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1237999"}], "+", 
+             RowBox[{"5496", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "10"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1568", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1237999"}], "+", 
+             RowBox[{"5496", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"16", " ", 
+        SuperscriptBox["l", "7"], " ", 
+        RowBox[{"(", 
+         RowBox[{"22736", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "24174353"}], "+", 
+             RowBox[{"3400584", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "8"], " ", 
+        RowBox[{"(", 
+         RowBox[{"68992", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "66918691"}], "+", 
+             RowBox[{"6883608", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"1193", "+", 
+             RowBox[{"108", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "145835709"}], "+", 
+             RowBox[{"48295936", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{"232064", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "233965907"}], "+", 
+             RowBox[{"68283160", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{"205408", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "194727379"}], "+", 
+             RowBox[{"78678360", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2688", " ", 
+           RowBox[{"(", 
+            RowBox[{"1325", "+", 
+             RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "33"}], "+", 
+                RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"756", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "655257905"}], "-", 
+             RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "33"}], "+", 
+                RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"353120448", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"448", " ", 
+           RowBox[{"(", 
+            RowBox[{"7801", "+", 
+             RowBox[{"864", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"3456", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1257504079"}], "-", 
+             RowBox[{"612576", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"760182224", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"896", " ", 
+           RowBox[{"(", 
+            RowBox[{"5227", "+", 
+             RowBox[{"432", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1728", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2354819291"}], "-", 
+             RowBox[{"612576", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1253075760", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1792", " ", 
+           RowBox[{"(", 
+            RowBox[{"5801", "+", 
+             RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "45"}], "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"3132", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2365420331"}], "-", 
+             RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "45"}], "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1370553888", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -4, " is \[Gamma]=", 
+   96768 $CellContext`l (1 + $CellContext`l) $CellContext`\[Omega] (109 - 
+     66 $CellContext`n + 10 $CellContext`n^2 + 
+     Complex[0, 264] $CellContext`\[Omega] + 
+     Complex[0, -80] $CellContext`n $CellContext`\[Omega] - 
+     160 $CellContext`\[Omega]^2 + $CellContext`l (37 - 24 $CellContext`n + 
+       4 $CellContext`n^2 + Complex[0, 96] $CellContext`\[Omega] + 
+       Complex[0, -32] $CellContext`n $CellContext`\[Omega] - 
+       64 $CellContext`\[Omega]^2) + $CellContext`l^2 (37 - 24 $CellContext`n + 
+       4 $CellContext`n^2 + Complex[0, 96] $CellContext`\[Omega] + 
+       Complex[0, -32] $CellContext`n $CellContext`\[Omega] - 
+       64 $CellContext`\[Omega]^2)) + $CellContext`m $CellContext`s (
+     20 $CellContext`l^9 (1568 + 
+       Pi $CellContext`\[Alpha]^2 (-1237999 + 5496 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^10 (1568 + 
+       Pi $CellContext`\[Alpha]^2 (-1237999 + 5496 $CellContext`\[Omega]^2)) + 
+     16 $CellContext`l^7 (22736 + 
+       Pi $CellContext`\[Alpha]^2 (-24174353 + 
+         3400584 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^8 (68992 + 
+       Pi $CellContext`\[Alpha]^2 (-66918691 + 
+         6883608 $CellContext`\[Omega]^2)) + 
+     4 (896 (1193 + 108 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-145835709 + 
+         48295936 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^6 (232064 + 
+       Pi $CellContext`\[Alpha]^2 (-233965907 + 
+         68283160 $CellContext`\[Omega]^2)) + 
+     8 $CellContext`l^5 (205408 + 
+       Pi $CellContext`\[Alpha]^2 (-194727379 + 
+         78678360 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l (
+       2688 (1325 + 
+         Complex[0, 18] (-33 + 10 $CellContext`n) $CellContext`\[Omega] + 
+         756 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-655257905 + 
+         Complex[0, -76572] (-33 + 10 $CellContext`n) $CellContext`\[Omega] + 
+         353120448 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^3 (
+       448 (7801 + 
+         Complex[0, 864] (-3 + $CellContext`n) $CellContext`\[Omega] + 
+         3456 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-1257504079 + 
+         Complex[0, -612576] (-3 + $CellContext`n) $CellContext`\[Omega] + 
+         760182224 $CellContext`\[Omega]^2)) + $CellContext`l^4 (
+       896 (5227 + 
+         Complex[0, 432] (-3 + $CellContext`n) $CellContext`\[Omega] + 
+         1728 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-2354819291 + 
+         Complex[0, -612576] (-3 + $CellContext`n) $CellContext`\[Omega] + 
+         1253075760 $CellContext`\[Omega]^2)) + $CellContext`l^2 (
+       1792 (5801 + 
+         Complex[0, 54] (-45 + 14 $CellContext`n) $CellContext`\[Omega] + 
+         3132 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-2365420331 + 
+         Complex[0, -153144] (-45 + 14 $CellContext`n) $CellContext`\[Omega] + 
+         1370553888 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.984779680456827*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"0fb84915-2a36-634b-9b02-1013d8dfd8d3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"2", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "16128"}], " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "l"}], ")"}], " ", "\[Omega]", " ", 
+       RowBox[{"(", 
+        RowBox[{"253", "-", 
+         RowBox[{"198", " ", "n"}], "+", 
+         RowBox[{"39", " ", 
+          SuperscriptBox["n", "2"]}], "+", 
+         RowBox[{"684", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+         RowBox[{"276", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+         RowBox[{"480", " ", 
+          SuperscriptBox["\[Omega]", "2"]}], "+", 
+         RowBox[{"4", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{"50", "-", 
+            RowBox[{"42", " ", "n"}], "+", 
+            RowBox[{"9", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"168", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"72", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"144", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"6", " ", 
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"38", "-", 
+            RowBox[{"32", " ", "n"}], "+", 
+            RowBox[{"7", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"128", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"56", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"112", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{"28", "-", 
+            RowBox[{"24", " ", "n"}], "+", 
+            RowBox[{"6", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"48", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"96", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"14", "-", 
+            RowBox[{"12", " ", "n"}], "+", 
+            RowBox[{"3", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"48", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"24", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"48", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "-", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"20", " ", 
+          SuperscriptBox["l", "9"], " ", 
+          RowBox[{"(", 
+           RowBox[{"2464", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "291347"}], "+", 
+               RowBox[{"8630", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "10"], " ", 
+          RowBox[{"(", 
+           RowBox[{"2464", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "291347"}], "+", 
+               RowBox[{"8630", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"16", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"112", " ", 
+             RowBox[{"(", 
+              RowBox[{"377", "+", 
+               RowBox[{"24", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2827077"}], "+", 
+               RowBox[{"1759976", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "8"], " ", 
+          RowBox[{"(", 
+           RowBox[{"32704", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "6227977"}], "+", 
+               RowBox[{"2250460", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"8", " ", 
+          SuperscriptBox["l", "7"], " ", 
+          RowBox[{"(", 
+           RowBox[{"28448", "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "8085749"}], "+", 
+               RowBox[{"4371470", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2688", " ", 
+             RowBox[{"(", 
+              RowBox[{"260", "+", 
+               RowBox[{"9", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "33"}], "+", 
+                  RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"352", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "56131075"}], "-", 
+               RowBox[{"38286", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "33"}], "+", 
+                  RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"65281732", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "6"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"461", "+", 
+               RowBox[{"108", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"432", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "132833563"}], "-", 
+               RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"125594904", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"1577", "+", 
+               RowBox[{"108", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "20"}], "+", 
+                  RowBox[{"9", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"3792", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "129014063"}], "-", 
+               RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "20"}], "+", 
+                  RowBox[{"9", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"198184112", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "5"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"725", "+", 
+               RowBox[{"324", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"1296", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "196572865"}], "-", 
+               RowBox[{"459432", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"255108472", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"2531", "+", 
+               RowBox[{"54", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "61"}], "+", 
+                  RowBox[{"25", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"4608", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "214656883"}], "-", 
+               RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "61"}], "+", 
+                  RowBox[{"25", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"297827656", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3584", " ", 
+             RowBox[{"(", 
+              RowBox[{"533", "+", 
+               RowBox[{"27", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "30"}], "+", 
+                  RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"1356", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "252247921"}], "-", 
+               RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "30"}], "+", 
+                  RowBox[{"13", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"408010848", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -3, " is \[Gamma]=", 
+   2 ((-16128) $CellContext`l (1 + $CellContext`l) $CellContext`\[Omega] (253 - 
+      198 $CellContext`n + 39 $CellContext`n^2 + 
+      Complex[0, 684] $CellContext`\[Omega] + 
+      Complex[0, -276] $CellContext`n $CellContext`\[Omega] - 
+      480 $CellContext`\[Omega]^2 + 
+      4 $CellContext`l (50 - 42 $CellContext`n + 9 $CellContext`n^2 + 
+        Complex[0, 168] $CellContext`\[Omega] + 
+        Complex[0, -72] $CellContext`n $CellContext`\[Omega] - 
+        144 $CellContext`\[Omega]^2) + 
+      6 $CellContext`l^2 (38 - 32 $CellContext`n + 7 $CellContext`n^2 + 
+        Complex[0, 128] $CellContext`\[Omega] + 
+        Complex[0, -56] $CellContext`n $CellContext`\[Omega] - 
+        112 $CellContext`\[Omega]^2) + $CellContext`l^4 (28 - 
+        24 $CellContext`n + 6 $CellContext`n^2 + 
+        Complex[0, 96] $CellContext`\[Omega] + 
+        Complex[0, -48] $CellContext`n $CellContext`\[Omega] - 
+        96 $CellContext`\[Omega]^2) + 
+      4 $CellContext`l^3 (14 - 12 $CellContext`n + 3 $CellContext`n^2 + 
+        Complex[0, 48] $CellContext`\[Omega] + 
+        Complex[0, -24] $CellContext`n $CellContext`\[Omega] - 
+        48 $CellContext`\[Omega]^2)) - $CellContext`m $CellContext`s (
+     20 $CellContext`l^9 (2464 + 
+       Pi $CellContext`\[Alpha]^2 (-291347 + 8630 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^10 (2464 + 
+       Pi $CellContext`\[Alpha]^2 (-291347 + 8630 $CellContext`\[Omega]^2)) + 
+     16 (112 (377 + 24 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-2827077 + 
+         1759976 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^8 (32704 + 
+       Pi $CellContext`\[Alpha]^2 (-6227977 + 
+         2250460 $CellContext`\[Omega]^2)) + 
+     8 $CellContext`l^7 (28448 + 
+       Pi $CellContext`\[Alpha]^2 (-8085749 + 
+         4371470 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l (
+       2688 (260 + 
+         Complex[0, 9] (-33 + 13 $CellContext`n) $CellContext`\[Omega] + 
+         352 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-56131075 + 
+         Complex[0, -38286] (-33 + 13 $CellContext`n) $CellContext`\[Omega] + 
+         65281732 $CellContext`\[Omega]^2)) + $CellContext`l^6 (
+       896 (461 + Complex[0, 108] (-2 + $CellContext`n) $CellContext`\[Omega] + 
+         432 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-132833563 + 
+         Complex[0, -153144] (-2 + $CellContext`n) $CellContext`\[Omega] + 
+         125594904 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^4 (
+       448 (1577 + 
+         Complex[0, 108] (-20 + 9 $CellContext`n) $CellContext`\[Omega] + 
+         3792 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-129014063 + 
+         Complex[0, -76572] (-20 + 9 $CellContext`n) $CellContext`\[Omega] + 
+         198184112 $CellContext`\[Omega]^2)) + $CellContext`l^5 (
+       896 (725 + Complex[0, 324] (-2 + $CellContext`n) $CellContext`\[Omega] + 
+         1296 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-196572865 + 
+         Complex[0, -459432] (-2 + $CellContext`n) $CellContext`\[Omega] + 
+         255108472 $CellContext`\[Omega]^2)) + $CellContext`l^2 (
+       896 (2531 + 
+         Complex[0, 54] (-61 + 25 $CellContext`n) $CellContext`\[Omega] + 
+         4608 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-214656883 + 
+         Complex[0, -76572] (-61 + 25 $CellContext`n) $CellContext`\[Omega] + 
+         297827656 $CellContext`\[Omega]^2)) + $CellContext`l^3 (
+       3584 (533 + 
+         Complex[0, 27] (-30 + 13 $CellContext`n) $CellContext`\[Omega] + 
+         1356 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-252247921 + 
+         Complex[0, -153144] (-30 + 13 $CellContext`n) $CellContext`\[Omega] + 
+         408010848 $CellContext`\[Omega]^2))))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.9847796804724503`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"96972dc0-e40a-dd4e-8490-8d06a3363385"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"21504", " ", "l", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"2", " ", "l"}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "2"]}], "+", 
+       SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      RowBox[{"117", "+", 
+       RowBox[{"38", " ", 
+        SuperscriptBox["n", "2"]}], "+", 
+       RowBox[{"n", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "130"}], "-", 
+          RowBox[{"232", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], "+", 
+       RowBox[{"376", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+       RowBox[{"320", " ", 
+        SuperscriptBox["\[Omega]", "2"]}], "+", 
+       RowBox[{"2", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{"21", "+", 
+          RowBox[{"11", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "31"}], "-", 
+             RowBox[{"88", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}],
+           "+", 
+          RowBox[{"124", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"176", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"6", " ", 
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"8", "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["n", "2"]}], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "11"}], "-", 
+             RowBox[{"32", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}],
+           "+", 
+          RowBox[{"44", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"64", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{"3", "+", 
+          SuperscriptBox["n", "2"], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "-", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], 
+          "+", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"16", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"3", "+", 
+          SuperscriptBox["n", "2"], "+", 
+          RowBox[{"n", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "-", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], 
+          "+", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+          RowBox[{"16", " ", 
+           SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+    RowBox[{"m", " ", "s", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"40", " ", 
+        SuperscriptBox["l", "9"], " ", 
+        RowBox[{"(", 
+         RowBox[{"2688", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "75999"}], "+", 
+             RowBox[{"14600", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["l", "10"], " ", 
+        RowBox[{"(", 
+         RowBox[{"2688", "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "75999"}], "+", 
+             RowBox[{"14600", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"12", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1792", " ", 
+           RowBox[{"(", 
+            RowBox[{"13", "+", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "704883"}], "+", 
+             RowBox[{"940496", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "7"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"21504", " ", 
+           RowBox[{"(", 
+            RowBox[{"3", "+", 
+             RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"8", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "5942991"}], "-", 
+             RowBox[{"68064", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"12139664", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "8"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"10752", " ", 
+           RowBox[{"(", 
+            RowBox[{"21", "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"16", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "10502931"}], "-", 
+             RowBox[{"68064", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"13015664", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", "l", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1344", " ", 
+           RowBox[{"(", 
+            RowBox[{"121", "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "65"}], "+", 
+                RowBox[{"38", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"216", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "5417247"}], "-", 
+             RowBox[{"8508", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "65"}], "+", 
+                RowBox[{"38", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"16191568", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["l", "6"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"672", " ", 
+           RowBox[{"(", 
+            RowBox[{"115", "+", 
+             RowBox[{"72", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "5"}], "+", 
+                RowBox[{"4", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"1072", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "10440765"}], "-", 
+             RowBox[{"76572", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "5"}], "+", 
+                RowBox[{"4", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"33402608", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2688", " ", 
+           RowBox[{"(", 
+            RowBox[{"213", "+", 
+             RowBox[{"28", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "23"}], "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"872", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "21568497"}], "-", 
+             RowBox[{"119112", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "23"}], "+", 
+                RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"83022592", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "5"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1344", " ", 
+           RowBox[{"(", 
+            RowBox[{"177", "+", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "107"}], "+", 
+                RowBox[{"80", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"2320", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "27427569"}], "-", 
+             RowBox[{"17016", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "107"}], "+", 
+                RowBox[{"80", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"116664400", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "3"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1344", " ", 
+           RowBox[{"(", 
+            RowBox[{"419", "+", 
+             RowBox[{"72", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "25"}], "+", 
+                RowBox[{"16", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"3312", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "27560523"}], "-", 
+             RowBox[{"153144", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "25"}], "+", 
+                RowBox[{"16", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"132249136", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2688", " ", 
+           RowBox[{"(", 
+            RowBox[{"341", "+", 
+             RowBox[{"8", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "197"}], "+", 
+                RowBox[{"134", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"3440", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+          RowBox[{"\[Pi]", " ", 
+           SuperscriptBox["\[Alpha]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "62446119"}], "-", 
+             RowBox[{"34032", " ", "\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "197"}], "+", 
+                RowBox[{"134", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+             RowBox[{"298947920", " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+      ")"}]}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -2, " is \[Gamma]=", 
+   21504 $CellContext`l (1 + 2 $CellContext`l + 
+     2 $CellContext`l^2 + $CellContext`l^3) $CellContext`\[Omega] (117 + 
+     38 $CellContext`n^2 + $CellContext`n (-130 + 
+       Complex[0, -232] $CellContext`\[Omega]) + 
+     Complex[0, 376] $CellContext`\[Omega] - 320 $CellContext`\[Omega]^2 + 
+     2 $CellContext`l (21 + 
+       11 $CellContext`n^2 + $CellContext`n (-31 + 
+         Complex[0, -88] $CellContext`\[Omega]) + 
+       Complex[0, 124] $CellContext`\[Omega] - 176 $CellContext`\[Omega]^2) + 
+     6 $CellContext`l^2 (8 + 
+       4 $CellContext`n^2 + $CellContext`n (-11 + 
+         Complex[0, -32] $CellContext`\[Omega]) + 
+       Complex[0, 44] $CellContext`\[Omega] - 64 $CellContext`\[Omega]^2) + 
+     4 $CellContext`l^3 (
+       3 + $CellContext`n^2 + $CellContext`n (-2 + 
+         Complex[0, -8] $CellContext`\[Omega]) + 
+       Complex[0, 8] $CellContext`\[Omega] - 16 $CellContext`\[Omega]^2) + 
+     2 $CellContext`l^4 (
+       3 + $CellContext`n^2 + $CellContext`n (-2 + 
+         Complex[0, -8] $CellContext`\[Omega]) + 
+       Complex[0, 8] $CellContext`\[Omega] - 
+       16 $CellContext`\[Omega]^2)) + $CellContext`m $CellContext`s (
+     40 $CellContext`l^9 (2688 + 
+       Pi $CellContext`\[Alpha]^2 (-75999 + 14600 $CellContext`\[Omega]^2)) + 
+     8 $CellContext`l^10 (2688 + 
+       Pi $CellContext`\[Alpha]^2 (-75999 + 14600 $CellContext`\[Omega]^2)) + 
+     12 (1792 (13 + 4 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-704883 + 940496 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^7 (
+       21504 (3 + Complex[0, 2] (-1 + $CellContext`n) $CellContext`\[Omega] + 
+         8 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-5942991 + 
+         Complex[0, -68064] (-1 + $CellContext`n) $CellContext`\[Omega] + 
+         12139664 $CellContext`\[Omega]^2)) + $CellContext`l^8 (
+       10752 (21 + Complex[0, 4] (-1 + $CellContext`n) $CellContext`\[Omega] + 
+         16 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-10502931 + 
+         Complex[0, -68064] (-1 + $CellContext`n) $CellContext`\[Omega] + 
+         13015664 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l (
+       1344 (121 + 
+         Complex[0, 4] (-65 + 38 $CellContext`n) $CellContext`\[Omega] + 
+         216 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-5417247 + 
+         Complex[0, -8508] (-65 + 38 $CellContext`n) $CellContext`\[Omega] + 
+         16191568 $CellContext`\[Omega]^2)) + 
+     4 $CellContext`l^6 (
+       672 (115 + 
+         Complex[0, 72] (-5 + 4 $CellContext`n) $CellContext`\[Omega] + 
+         1072 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-10440765 + 
+         Complex[0, -76572] (-5 + 4 $CellContext`n) $CellContext`\[Omega] + 
+         33402608 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^2 (
+       2688 (213 + 
+         Complex[0, 28] (-23 + 14 $CellContext`n) $CellContext`\[Omega] + 
+         872 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-21568497 + 
+         Complex[0, -119112] (-23 + 14 $CellContext`n) $CellContext`\[Omega] + 
+         83022592 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^5 (
+       1344 (177 + 
+         Complex[0, 8] (-107 + 80 $CellContext`n) $CellContext`\[Omega] + 
+         2320 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-27427569 + 
+         Complex[0, -17016] (-107 + 80 $CellContext`n) $CellContext`\[Omega] + 
+         116664400 $CellContext`\[Omega]^2)) + 
+     2 $CellContext`l^3 (
+       1344 (419 + 
+         Complex[0, 72] (-25 + 16 $CellContext`n) $CellContext`\[Omega] + 
+         3312 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-27560523 + 
+         Complex[0, -153144] (-25 + 16 $CellContext`n) $CellContext`\[Omega] + 
+         132249136 $CellContext`\[Omega]^2)) + $CellContext`l^4 (
+       2688 (341 + 
+         Complex[0, 8] (-197 + 134 $CellContext`n) $CellContext`\[Omega] + 
+         3440 $CellContext`\[Omega]^2) + 
+       Pi $CellContext`\[Alpha]^2 (-62446119 + 
+         Complex[0, -34032] (-197 + 134 $CellContext`n) $CellContext`\[Omega] + 
+         298947920 $CellContext`\[Omega]^2)))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.9847796804880695`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"38adcd22-ca5f-1f4c-b661-5fd546831ca8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "2"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", "l", "+", 
+      SuperscriptBox["l", "2"]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"1792", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"2", " ", "l"}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "2"]}], "+", 
+         SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+       RowBox[{"(", 
+        RowBox[{"74", "+", 
+         RowBox[{"79", " ", 
+          SuperscriptBox["n", "2"]}], "+", 
+         RowBox[{"n", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "132"}], "-", 
+            RowBox[{"416", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}],
+          "+", 
+         RowBox[{"312", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+         RowBox[{"400", " ", 
+          SuperscriptBox["\[Omega]", "2"]}], "+", 
+         RowBox[{"3", " ", 
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"9", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"n", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "8"}], "-", 
+               RowBox[{"72", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+              ")"}]}], "+", 
+            RowBox[{"16", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", " ", "\[ImaginaryI]"}], "-", 
+               RowBox[{"9", " ", "\[Omega]"}]}], ")"}], " ", "\[Omega]"}]}], 
+           ")"}]}], "+", 
+         RowBox[{"l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "8"}], "+", 
+            RowBox[{"26", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"n", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "24"}], "-", 
+               RowBox[{"208", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+              ")"}]}], "+", 
+            RowBox[{"96", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"416", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"8", "+", 
+            SuperscriptBox["n", "2"], "-", 
+            RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"16", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{"8", "+", 
+            SuperscriptBox["n", "2"], "-", 
+            RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"16", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "7"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"5", "+", 
+               RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}],
+                "+", 
+               RowBox[{"8", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "34645"}], "-", 
+               RowBox[{
+               "2836", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+               RowBox[{"43976", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "8"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"5", "+", 
+               RowBox[{"2", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}],
+                "+", 
+               RowBox[{"8", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "34645"}], "-", 
+               RowBox[{
+               "2836", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "+", 
+               RowBox[{"43976", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"11", "-", 
+               RowBox[{"4", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "45069"}], "+", 
+               RowBox[{"159176", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "6"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"11", "+", 
+               RowBox[{"3", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", 
+                  RowBox[{"11", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"112", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"3", " ", "\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "26713"}], "-", 
+               RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "4"}], "+", 
+                  RowBox[{"11", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"175674", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"10", "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "66"}], "+", 
+                  RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"48", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "90035"}], "-", 
+               RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "66"}], "+", 
+                  RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"2144316", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "5"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2"}], "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "36"}], "+", 
+                  RowBox[{"85", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"280", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "238319"}], "-", 
+               RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "36"}], "+", 
+                  RowBox[{"85", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"2854300", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"17", "+", 
+               RowBox[{"3", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "56"}], "+", 
+                  RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"504", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "142023"}], "-", 
+               RowBox[{"2127", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "56"}], "+", 
+                  RowBox[{"79", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"2887414", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "114"}], "+", 
+                  RowBox[{"187", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"476", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "300203"}], "-", 
+               RowBox[{"1418", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "114"}], "+", 
+                  RowBox[{"187", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"5214692", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"41", "+", 
+               RowBox[{"16", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "18"}], "+", 
+                  RowBox[{"23", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"512", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "407773"}], "-", 
+               RowBox[{"22688", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "18"}], "+", 
+                  RowBox[{"23", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"9141344", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", -1, 
+   " is \[Gamma]=", (-2) (1 + $CellContext`l + $CellContext`l^2) (
+    1792 $CellContext`l (1 + 2 $CellContext`l + 
+      2 $CellContext`l^2 + $CellContext`l^3) $CellContext`\[Omega] (74 + 
+      79 $CellContext`n^2 + $CellContext`n (-132 + 
+        Complex[0, -416] $CellContext`\[Omega]) + 
+      Complex[0, 312] $CellContext`\[Omega] - 400 $CellContext`\[Omega]^2 + 
+      3 $CellContext`l^2 (
+        9 $CellContext`n^2 + $CellContext`n (-8 + 
+          Complex[0, -72] $CellContext`\[Omega]) + 
+        16 (Complex[0, 2] - 
+          9 $CellContext`\[Omega]) $CellContext`\[Omega]) + $CellContext`l \
+(-8 + 26 $CellContext`n^2 + $CellContext`n (-24 + 
+          Complex[0, -208] $CellContext`\[Omega]) + 
+        Complex[0, 96] $CellContext`\[Omega] - 416 $CellContext`\[Omega]^2) + 
+      2 $CellContext`l^3 (8 + $CellContext`n^2 + 
+        Complex[0, -8] $CellContext`n $CellContext`\[Omega] - 
+        16 $CellContext`\[Omega]^2) + $CellContext`l^4 (8 + $CellContext`n^2 + 
+        Complex[0, -8] $CellContext`n $CellContext`\[Omega] - 
+        16 $CellContext`\[Omega]^2)) + $CellContext`m $CellContext`s (
+      4 $CellContext`l^7 (
+        896 (5 + Complex[0, 2] $CellContext`n $CellContext`\[Omega] + 
+          8 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-34645 + 
+          Complex[0, -2836] $CellContext`n $CellContext`\[Omega] + 
+          43976 $CellContext`\[Omega]^2)) + $CellContext`l^8 (
+        896 (5 + Complex[0, 2] $CellContext`n $CellContext`\[Omega] + 
+          8 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-34645 + 
+          Complex[0, -2836] $CellContext`n $CellContext`\[Omega] + 
+          43976 $CellContext`\[Omega]^2)) + 
+      4 (448 (11 - 4 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-45069 + 159176 $CellContext`\[Omega]^2)) + 
+      4 $CellContext`l^6 (
+        448 (11 + Complex[0, 3] (-4 + 
+            11 $CellContext`n) $CellContext`\[Omega] + 
+          112 $CellContext`\[Omega]^2) + 
+        3 Pi $CellContext`\[Alpha]^2 (-26713 + 
+          Complex[0, -709] (-4 + 11 $CellContext`n) $CellContext`\[Omega] + 
+          175674 $CellContext`\[Omega]^2)) + 
+      2 $CellContext`l (
+        896 (10 + Complex[0, 1] (-66 + 
+            79 $CellContext`n) $CellContext`\[Omega] + 
+          48 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-90035 + 
+          Complex[0, -1418] (-66 + 79 $CellContext`n) $CellContext`\[Omega] + 
+          2144316 $CellContext`\[Omega]^2)) + 
+      2 $CellContext`l^5 (
+        896 (-2 + Complex[0, 1] (-36 + 
+            85 $CellContext`n) $CellContext`\[Omega] + 
+          280 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-238319 + 
+          Complex[0, -1418] (-36 + 85 $CellContext`n) $CellContext`\[Omega] + 
+          2854300 $CellContext`\[Omega]^2)) + 
+      4 $CellContext`l^3 (
+        448 (17 + Complex[0, 3] (-56 + 
+            79 $CellContext`n) $CellContext`\[Omega] + 
+          504 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-142023 + 
+          Complex[0, -2127] (-56 + 79 $CellContext`n) $CellContext`\[Omega] + 
+          2887414 $CellContext`\[Omega]^2)) + 
+      2 $CellContext`l^4 (
+        896 (1 + Complex[0, 1] (-114 + 
+            187 $CellContext`n) $CellContext`\[Omega] + 
+          476 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-300203 + 
+          Complex[0, -1418] (-114 + 187 $CellContext`n) $CellContext`\[Omega] + 
+          5214692 $CellContext`\[Omega]^2)) + $CellContext`l^2 (
+        896 (41 + Complex[0, 16] (-18 + 
+            23 $CellContext`n) $CellContext`\[Omega] + 
+          512 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-407773 + 
+          Complex[0, -22688] (-18 + 23 $CellContext`n) $CellContext`\[Omega] + 
+          9141344 $CellContext`\[Omega]^2))))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.9847796805036926`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"57ad361b-7675-9e49-8cdb-016e2feb9993"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", "l", "+", 
+       SuperscriptBox["l", "2"]}], ")"}], "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3584", " ", "l", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"2", " ", "l"}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "2"]}], "+", 
+         SuperscriptBox["l", "3"]}], ")"}], " ", "\[Omega]", " ", 
+       RowBox[{"(", 
+        RowBox[{"3", "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "3"]}], "+", 
+         SuperscriptBox["l", "4"], "+", 
+         RowBox[{"14", " ", 
+          SuperscriptBox["n", "2"]}], "+", 
+         RowBox[{"n", " ", 
+          RowBox[{"(", 
+           RowBox[{"2", "-", 
+            RowBox[{"64", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}], 
+         "-", 
+         RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+         RowBox[{"32", " ", 
+          SuperscriptBox["\[Omega]", "2"]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"2", " ", 
+             SuperscriptBox["n", "2"]}], "+", 
+            RowBox[{"2", " ", "n", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], 
+              ")"}]}], "-", 
+            RowBox[{"8", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"32", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "n", "+", 
+            SuperscriptBox["n", "2"], "-", 
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}], "-", 
+            RowBox[{"8", " ", "\[ImaginaryI]", " ", "n", " ", "\[Omega]"}], "-", 
+            RowBox[{"16", " ", 
+             SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+      RowBox[{"m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"6", " ", 
+          SuperscriptBox["l", "5"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"24", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "709"}], "-", 
+               RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"4944", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["l", "6"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"24", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "709"}], "-", 
+               RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"4944", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"4", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"448", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"8", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{"2511", "+", 
+               RowBox[{"12832", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"8", " ", 
+          SuperscriptBox["l", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"112", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"5", "+", 
+                  RowBox[{"34", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"152", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "392"}], "-", 
+               RowBox[{"709", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"5", "+", 
+                  RowBox[{"34", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"95928", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{"2", " ", "l", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"12", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "943"}], "-", 
+               RowBox[{"2836", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"14", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"275984", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"896", " ", 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"5", "+", 
+                  RowBox[{"22", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"136", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "5113"}], "-", 
+               RowBox[{"5672", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"5", "+", 
+                  RowBox[{"22", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"408432", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["l", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3584", " ", "\[Omega]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"3", " ", "\[ImaginaryI]"}], "+", 
+               RowBox[{"30", " ", "\[ImaginaryI]", " ", "n"}], "+", 
+               RowBox[{"22", " ", "\[Omega]"}]}], ")"}]}], "+", 
+            RowBox[{"\[Pi]", " ", 
+             SuperscriptBox["\[Alpha]", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2745"}], "-", 
+               RowBox[{"17016", " ", "\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1", "+", 
+                  RowBox[{"10", " ", "n"}]}], ")"}], " ", "\[Omega]"}], "+", 
+               RowBox[{"930736", " ", 
+                SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ")"}]}]}],
+  SequenceForm[
+  "The coefficient for i=", 0, 
+   " is \[Gamma]=", (1 + $CellContext`l + $CellContext`l^2)^2 (
+    3584 $CellContext`l (1 + 2 $CellContext`l + 
+      2 $CellContext`l^2 + $CellContext`l^3) $CellContext`\[Omega] (3 + 
+      2 $CellContext`l^3 + $CellContext`l^4 + 
+      14 $CellContext`n^2 + $CellContext`n (2 + 
+        Complex[0, -64] $CellContext`\[Omega]) + 
+      Complex[0, -8] $CellContext`\[Omega] - 
+      32 $CellContext`\[Omega]^2 + $CellContext`l^2 (-1 + 2 $CellContext`n^2 + 
+        2 $CellContext`n (1 + Complex[0, -8] $CellContext`\[Omega]) + 
+        Complex[0, -8] $CellContext`\[Omega] - 32 $CellContext`\[Omega]^2) + 
+      2 $CellContext`l (-1 + $CellContext`n + $CellContext`n^2 + 
+        Complex[0, -4] $CellContext`\[Omega] + 
+        Complex[0, -8] $CellContext`n $CellContext`\[Omega] - 
+        16 $CellContext`\[Omega]^2)) + $CellContext`m $CellContext`s (
+      6 $CellContext`l^5 (
+        448 (1 + Complex[0, 4] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+          24 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-709 + 
+          Complex[0, -2836] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+          4944 $CellContext`\[Omega]^2)) + 
+      2 $CellContext`l^6 (
+        448 (1 + Complex[0, 4] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+          24 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-709 + 
+          Complex[0, -2836] (1 + 2 $CellContext`n) $CellContext`\[Omega] + 
+          4944 $CellContext`\[Omega]^2)) + 
+      4 (448 (1 - 8 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (2511 + 12832 $CellContext`\[Omega]^2)) + 
+      8 $CellContext`l^3 (
+        112 (-3 + Complex[0, 4] (5 + 34 $CellContext`n) $CellContext`\[Omega] + 
+          152 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-392 + 
+          Complex[0, -709] (5 + 34 $CellContext`n) $CellContext`\[Omega] + 
+          95928 $CellContext`\[Omega]^2)) + 
+      2 $CellContext`l (
+        896 (1 + Complex[0, 2] (1 + 14 $CellContext`n) $CellContext`\[Omega] + 
+          12 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-943 + 
+          Complex[0, -2836] (1 + 14 $CellContext`n) $CellContext`\[Omega] + 
+          275984 $CellContext`\[Omega]^2)) + $CellContext`l^4 (
+        896 (1 + Complex[0, 4] (5 + 22 $CellContext`n) $CellContext`\[Omega] + 
+          136 $CellContext`\[Omega]^2) + 
+        Pi $CellContext`\[Alpha]^2 (-5113 + 
+          Complex[0, -5672] (5 + 22 $CellContext`n) $CellContext`\[Omega] + 
+          408432 $CellContext`\[Omega]^2)) + $CellContext`l^2 (
+        3584 $CellContext`\[Omega] (Complex[0, 3] + 
+          Complex[0, 30] $CellContext`n + 22 $CellContext`\[Omega]) + 
+        Pi $CellContext`\[Alpha]^2 (-2745 + 
+          Complex[0, -17016] (1 + 10 $CellContext`n) $CellContext`\[Omega] + 
+          930736 $CellContext`\[Omega]^2))))],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.9847796805036926`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"035ab481-c64b-494d-a697-4465be3b36a7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The coefficient for i=\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\" is \[Gamma]=\"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "8"}], " ", "l", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", "l"}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", "l", "+", 
+       SuperscriptBox["l", "2"]}], ")"}], "4"], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", "n"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"448", " ", "n"}], "-", 
+      RowBox[{"\[ImaginaryI]", " ", "m", " ", "s", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "448"}], "+", 
+         RowBox[{"709", " ", "\[Pi]", " ", 
+          SuperscriptBox["\[Alpha]", "2"]}]}], ")"}]}], "+", 
+      RowBox[{"448", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Omega]"}]}], ")"}]}]}], 
+     ")"}], " ", "\[Omega]"}]}],
+  SequenceForm[
+  "The coefficient for i=", 1, 
+   " is \[Gamma]=", (-8) $CellContext`l (
+    1 + $CellContext`l) (1 + $CellContext`l + $CellContext`l^2)^4 (
+    1 + $CellContext`n) (448 $CellContext`n + 
+    Complex[0, -1] $CellContext`m $CellContext`s (-448 + 
+      709 Pi $CellContext`\[Alpha]^2) + 
+    448 (1 + Complex[0, -4] $CellContext`\[Omega])) $CellContext`\[Omega]],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.9847796752454624`*^9, 3.9847796805193253`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[182]:=",ExpressionUUID->"769f0399-71dc-ea41-833c-b544691e6144"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+LightDark->"Light",
+Magnification:>1.2 Inherited,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ee338ea9-49a5-1541-a07e-0aefb9d4eba6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 1420, 31, 125, "Input",ExpressionUUID->"cc883725-bd70-a247-aa06-624d1287641a"],
+Cell[CellGroupData[{
+Cell[1999, 55, 214, 4, 33, "Input",ExpressionUUID->"de24e418-84b2-2b49-a968-5cd92cee9845"],
+Cell[2216, 61, 897, 27, 41, "Output",ExpressionUUID->"0d026ab0-6106-f148-9392-678f2678a2fa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3150, 93, 190, 4, 33, "Input",ExpressionUUID->"89b8e4d3-8bbe-6c49-a713-07bd9e6966b0"],
+Cell[3343, 99, 8309, 214, 223, "Output",ExpressionUUID->"ba6150b9-bf93-ba45-a4fe-ef0b4dbc0d55"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11689, 318, 205, 5, 33, "Input",ExpressionUUID->"4fccb0f4-8df4-af48-8674-e55d4d2c1f46"],
+Cell[11897, 325, 11159, 291, 300, "Output",ExpressionUUID->"f1f3dc5d-3ce8-d742-a391-c8187891cd54"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23093, 621, 232, 5, 33, "Input",ExpressionUUID->"1766d5ff-2f0d-0346-908a-41d757f42fbe"],
+Cell[23328, 628, 11917, 320, 352, "Output",ExpressionUUID->"a17cc715-f014-f24d-993d-746f17845712"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35282, 953, 208, 5, 33, "Input",ExpressionUUID->"4690d26f-9747-a64c-a765-f898ad0cae1a"],
+Cell[35493, 960, 10907, 276, 326, "Output",ExpressionUUID->"f84b6c7d-e157-034d-b608-91c881959fec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46437, 1241, 206, 5, 33, "Input",ExpressionUUID->"fbceeb19-9970-2a46-83e1-f7ac7407fb84"],
+Cell[46646, 1248, 8210, 221, 274, "Output",ExpressionUUID->"877cdd63-03d1-3a40-a11b-659fcbac46e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54893, 1474, 208, 5, 33, "Input",ExpressionUUID->"2c6d0d67-2f43-ad4d-997f-60cf4c2cb7fe"],
+Cell[55104, 1481, 5997, 161, 223, "Output",ExpressionUUID->"43daf350-10b8-6348-a730-1bdadd529bc5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61138, 1647, 208, 5, 33, "Input",ExpressionUUID->"a23ad6df-16f8-3544-a879-47a5a001988b"],
+Cell[61349, 1654, 3647, 105, 145, "Output",ExpressionUUID->"a1ac2081-db3c-ab40-8ef8-474ce5e51dc1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65033, 1764, 234, 5, 33, "Input",ExpressionUUID->"4366ec8f-d27b-ce4d-abde-43cade507b1d"],
+Cell[65270, 1771, 3095, 87, 119, "Output",ExpressionUUID->"28200a87-40b7-0449-9a1f-188f8ab7b02f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68402, 1863, 206, 5, 33, "Input",ExpressionUUID->"20b16790-0820-bc46-96c4-5528c43e6dc3"],
+Cell[68611, 1870, 2609, 71, 93, "Output",ExpressionUUID->"aefa798e-3f73-614d-9470-4b4c8c821b6d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71257, 1946, 206, 5, 33, "Input",ExpressionUUID->"aec885cb-dea4-c94b-af14-a470a00a5c42"],
+Cell[71466, 1953, 1476, 41, 90, "Output",ExpressionUUID->"25349934-57d5-6b40-9632-adc9977d36f9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72979, 1999, 233, 5, 33, "Input",ExpressionUUID->"f307373a-1ab4-f649-9d4f-bd4c8063875e"],
+Cell[73215, 2006, 919, 25, 67, "Output",ExpressionUUID->"ce9bfebe-e4f1-a34f-90bf-d6de49fb762d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74171, 2036, 235, 5, 33, "Input",ExpressionUUID->"2fbfa382-73e3-6a41-933e-f659879fe02b"],
+Cell[74409, 2043, 682, 18, 41, "Output",ExpressionUUID->"1e9fbb24-e37a-4a42-9cc5-f4334d10a70e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75128, 2066, 232, 5, 33, "Input",ExpressionUUID->"b9babaef-feba-9a4d-99d7-3eb37f400513"],
+Cell[75363, 2073, 561, 15, 41, "Output",ExpressionUUID->"b357ec07-391c-a743-8213-4a072cbdbf06"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75961, 2093, 230, 5, 33, "Input",ExpressionUUID->"1e06b992-362c-ce4c-9f58-a7359c81f320"],
+Cell[76194, 2100, 402, 10, 41, "Output",ExpressionUUID->"b34afdcd-49bf-7148-8649-18e2251235f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76633, 2115, 231, 5, 33, "Input",ExpressionUUID->"df282671-d864-0645-974d-758d2081519d"],
+Cell[76867, 2122, 268, 6, 38, "Output",ExpressionUUID->"e9149e96-2359-5741-b969-f8fc49151ed2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77172, 2133, 560, 14, 118, "Input",ExpressionUUID->"1c2b0d5c-0c1c-5e4c-b180-9cef8c13bb1b"],
+Cell[CellGroupData[{
+Cell[77757, 2151, 662, 14, 26, "Print",ExpressionUUID->"7c99340e-248e-f840-9ccd-8ade330e6b9c"],
+Cell[78422, 2167, 871, 21, 28, "Print",ExpressionUUID->"67556acf-76d0-f14b-b588-6c980792e7b2"],
+Cell[79296, 2190, 1107, 27, 28, "Print",ExpressionUUID->"8d0cc0bc-3afc-c747-8078-f4ba0b46bbc2"],
+Cell[80406, 2219, 1288, 30, 28, "Print",ExpressionUUID->"17f4c704-6145-9d44-9e47-6fb07f947504"],
+Cell[81697, 2251, 1640, 38, 52, "Print",ExpressionUUID->"c3d5b37b-53dc-154e-8bf2-99d41ebfa285"],
+Cell[83340, 2291, 2399, 57, 74, "Print",ExpressionUUID->"01d66c43-3e06-2948-80ba-5b652b50d14a"],
+Cell[85742, 2350, 4044, 99, 98, "Print",ExpressionUUID->"ad61ac71-3bce-354d-9003-7a0f56054899"],
+Cell[89789, 2451, 4670, 116, 122, "Print",ExpressionUUID->"239997d5-fd23-f74d-bb4b-ecd26d96c3bb"],
+Cell[94462, 2569, 5389, 137, 146, "Print",ExpressionUUID->"d32250bd-33d2-8243-bb40-295ca7084291"],
+Cell[99854, 2708, 8529, 205, 170, "Print",ExpressionUUID->"a4ec4d4e-9d19-3547-900e-dd444de18af6"],
+Cell[108386, 2915, 11907, 284, 218, "Print",ExpressionUUID->"0fb84915-2a36-634b-9b02-1013d8dfd8d3"],
+Cell[120296, 3201, 15560, 353, 267, "Print",ExpressionUUID->"96972dc0-e40a-dd4e-8490-8d06a3363385"],
+Cell[135859, 3556, 17068, 411, 291, "Print",ExpressionUUID->"38adcd22-ca5f-1f4c-b661-5fd546831ca8"],
+Cell[152930, 3969, 15926, 374, 267, "Print",ExpressionUUID->"57ad361b-7675-9e49-8cdb-016e2feb9993"],
+Cell[168859, 4345, 11874, 272, 194, "Print",ExpressionUUID->"035ab481-c64b-494d-a697-4465be3b36a7"],
+Cell[180736, 4619, 1557, 40, 28, "Print",ExpressionUUID->"769f0399-71dc-ea41-833c-b544691e6144"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
